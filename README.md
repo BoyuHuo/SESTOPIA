@@ -47,4 +47,4 @@ Rerequisite: node
 
 #test
 
-`npm test` (TODO: update later by Micheal)
+`npm test`
