@@ -1,16 +1,24 @@
 # SESTOPIA
 SOEN 6011  SOFTWARE ENGINEERING PROCESSES - Team E
 
-### Team Members  
+### Team Members (Alphabetical)
 
 Ali Zafar Iqbal *...*  
+
 Baiyu Huo *40076004*  
+
 Chitra Gunasekaran *...*  
+
 Dhruv Goyani *...*  
+
 Mahsa Hemati *...*
+
 Michael Hanna *...*
+
 Shahryar Haghighifard *...*
+
 Uchechukwu Iroegbu *...*
+
 
 ---
 
