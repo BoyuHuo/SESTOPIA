@@ -39,12 +39,12 @@ Rerequisite: node
 
 #install package
 
-npm install
+`npm install`
 
 #start service, serve service (http://localhost:3000)
 
-npm start
+`npm start`
 
 #test
 
-npm test (TODO: update later by Micheal)
+`npm test` (TODO: update later by Micheal)
