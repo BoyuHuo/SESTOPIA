@@ -1,15 +1,18 @@
-var  mysql = require("../service/mysqlUtil");
+var  memberService = require("../service/memberService");
 var express = require('express');
 var router = express.Router();
 
 /* GET members. */
 router.get('/', (req, res, next) => {
-  let totalData;
-   mysql.query('SELECT * FROM members',function (err,rows, field) {
-       res.send(rows);
-   })
 
-
+   memberService.getAllMembers().then((data)=>{
+    res.send(data);
+  },(err)=>{
+    res.status(501).send("Can't get members because : "+err.stack);
+  })
 });
+
+
+
 
 module.exports = router;
