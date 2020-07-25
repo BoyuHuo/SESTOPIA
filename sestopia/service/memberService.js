@@ -14,6 +14,21 @@ let getAllMembers = function() {
 
 //TODO Micheal
 /* add new member function */
+let addMember = function(name,sno,email) {
+    return new Promise(function(resolve, reject) {
+        mysql.query('INSERT INTO members (name,sno,email) VALUES (' + mysql.pool.escape(name) + ',' + mysql.pool.escape(sno) + ',' + mysql.pool.escape(email) + ')',function(err, data, field) {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(data)
+            }
+        })
+    })
+}
 
 
-module.exports = { getAllMembers };
+
+
+
+
+module.exports = { getAllMembers,addMember};
