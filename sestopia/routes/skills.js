@@ -24,6 +24,15 @@ router.get('/search', (req, res, next) => {
 //TODO Micheal
 /* Add a new skill */
 
+router.post('/addskill', (req, res, next) => {
+    memberService.addSkill(req.body.name, req.body.classification, req.body.prerequisites,req.body.knowledge_area,req.body.rationale,req.body.roles_for_skill,req.body.related_activities,req.body.real_world_scenario,req.body.role_of_academia,req.body.tools,req.body.self_assessment,req.body.reference).then((data) => {
+        res.send(data);
+    }, (err) => {
+        res.status(501).send("Can't add skill because : " + err.stack);
+    })
+});
+
+
 
 
 
