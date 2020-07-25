@@ -3,7 +3,7 @@ SOEN 6011  SOFTWARE ENGINEERING PROCESSES - Team E
 
 ### Team Members (Alphabetical)
 
-Ali Zafar Iqbal *...*  
+Ali Zafar Iqbal *40076898*  
 
 Baiyu Huo *40076004*  
 
