@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+
+    <link rel="stylesheet" href="./stylesheets/style2.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="./javascripts/scripts2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2/dist/css/splide.min.css">
+<body>
+
+
+    
+    <h1 id="studentName"></h1>
+    <div class="studentOverview">
+
+    <div class="upperContiner">
+
+
+
+
+        <div>
+
+        <h2>Student Overview</h2>
+        <p>It’s no coincidence that the popularity of zero-waste lifestyles happens to coincide with mounting evidence that climate change will be the defining event of this century. We’ve also only just begun to seriously research the effect of the staggering amount of plastic in our oceans — the first comprehensive count of it by Science just three years ago reported anywhere between 4.7 and 12.8 million metric tons of ocean plastic. Plastic, in modern life, is nearly inescapable — simply washing our clothing, about 60 percent of which is now made of synthetic plastic fibers — releases hundreds of thousands of fibers into the water supply.</p>
+        </div>
+        <div>
+        <h2>Knowledge Area</h2>
+        <p>Project Managment</p>
+        </div>
+        <div>
+        <h2>Skill of choice</h2>
+        <p>communication</p>
+        </div>    
+        <div>
+        <h2>Project Responsibility</h2>
+        <p>TODO</p>
+        </div>
+    </div>
+    <div class="downloadContainer">
+        <div>
+            <h1>Download Report</h1>
+
+        </div>
+        <div>
+            
+            <h2><span>icon</span>Download Now</h2>
+            <p>wanna see more download the report</p>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+    <div class="slidersC">
+    <div class="splide" id="primary-slider">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide primaryNumbers">01</li>
+                <li class="splide__slide primaryNumbers">02</li>
+                <li class="splide__slide primaryNumbers">03</li>
+                <li class="splide__slide primaryNumbers">04</li>
+                <li class="splide__slide primaryNumbers">05</li>
+                <li class="splide__slide primaryNumbers">06</li>
+                <li class="splide__slide primaryNumbers">07</li>
+                <li class="splide__slide primaryNumbers">08</li>
+                <li class="splide__slide primaryNumbers">09</li>
+                <li class="splide__slide primaryNumbers">10</li>
+                <li class="splide__slide primaryNumbers">11</li>
+                <li class="splide__slide primaryNumbers">12</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="splide" id="secondary-slider">
+        <div class="splide__track">
+            <ul class="splide__list" id="secondSliderContent">
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+    <script>
+        $("#studentName").append(json[0].studentName)
+        json.forEach(item =>      {
+    // document.getElementById("#hellos").innerHTML = '<ol><li>html data</li></ol>'
+    if(item.name !== undefined){
+    $("#secondSliderContent").append("<li class=\"splide__slide skillItem\" >"+"<h1 class=\"skillName\">"+ item.name + "</h1>"+"<h2 class=\"skillPosition\" >"+ item.skillPosition +"</h2>"+"<p class=\"skillContent\">"+ item.skill + "</p>" +"</li>");
+
+
+    }
+    
+
+    
+        }
+);
+    </script>
+
+</body>
+</html>
