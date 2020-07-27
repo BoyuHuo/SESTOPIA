@@ -1,8 +1,169 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    
+    margin: 0;
+    padding: 0;
 }
 
-a {
-  color: #00B7FF;
+div.mainContent{
+
+
+   height: 100vh;
+
 }
+
+.mainHeader{
+    /* background-color: red; */
+    height: 20vh;
+    display: flex;
+}
+
+.logoContainer {
+
+    width: 50%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+
+    align-items: center;
+
+    
+}
+.logoContainer h2{
+
+    font: Medium 18px/21px Futura Md BT;
+    letter-spacing: 6.07px;
+    color: #1A1A1A;
+    text-transform: uppercase;
+    margin-left: 20% ;
+    
+
+}
+
+
+.menuItems{
+
+    height: 100%;
+    width: 50%;
+
+}
+
+.menuItems{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.menuItems ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20%;
+    
+
+}
+
+.menuItems ul li{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 14px 16px;
+    white-space: nowrap;
+    font: Medium 18px/21px Futura Md BT;
+    letter-spacing: 0px;
+    color: #1A1A1A; 
+
+}
+header{
+
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+
+
+
+.hideFade{
+
+    width: 100%;
+    height: 50vh;
+}
+.hideFadeDown {
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
+    z-index: 30;
+
+    /* background: linear-gradient(to bottom, transparent 0%, black 100%); */
+
+}
+
+.hideFadeUp{
+
+    position: fixed;
+    background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
+    z-index: 30;
+    /* background: linear-gradient(to top, transparent 0%, black 100%); */
+
+}
+
+
+
+.splide {
+    max-height: 100vh ;
+    /* top:30vh; */
+}
+.test33{
+    /* background-color: red; */
+    height: 33vh;
+    width: 100%;
+    text-align: center;
+    line-height: 33vh;
+    letter-spacing: 0px;
+    color: #363636;
+    /* color: darken(red); */
+    font-size: 8em;
+    -webkit-text-stroke: black;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+}
+
+
+.mouseScrollIcon{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 101;
+}
+
+.test33.is-active{
+    font-size: 9em;    
+    color: #363636;
+    -webkit-text-stroke-width: 0px;
+    transition: all 0.3s;
+}
+
+
+
+.testme     {
+    position: fixed !important;
+    position: fixed !important;
+    right: 45px !important;
+    left: unset !important;
+    z-index: 300 !important;
+}
+.custom-prev{
+    top: 45vh !important;
+}
+
+.custom-next{
+    top: 55vh !important;
+}
+
