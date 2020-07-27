@@ -1,4 +1,4 @@
-var mysql = require("./mysqlUtil");
+var mysql = require("../util/mysql.util");
 
 let getAllMembers = function() {
     return new Promise(function(resolve, reject) {
@@ -14,9 +14,9 @@ let getAllMembers = function() {
 
 //TODO Micheal
 /* add new member function */
-let addMember = function(name,sno,email) {
+let addMember = function(name, sno, email) {
     return new Promise(function(resolve, reject) {
-        mysql.query('INSERT INTO members (name,sno,email) VALUES (' + mysql.pool.escape(name) + ',' + mysql.pool.escape(sno) + ',' + mysql.pool.escape(email) + ')',function(err, data, field) {
+        mysql.query('INSERT INTO members (name,sno,email) VALUES (' + mysql.pool.escape(name) + ',' + mysql.pool.escape(sno) + ',' + mysql.pool.escape(email) + ')', function(err, data, field) {
             if (err) {
                 reject(err)
             } else {
@@ -31,4 +31,4 @@ let addMember = function(name,sno,email) {
 
 
 
-module.exports = { getAllMembers,addMember};
+module.exports = { getAllMembers, addMember };
