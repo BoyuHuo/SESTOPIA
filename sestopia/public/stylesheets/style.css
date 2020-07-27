@@ -192,7 +192,6 @@ header{
 
 .testme     {
     position: fixed !important;
-    position: fixed !important;
     right: 45px !important;
     left: unset !important;
     z-index: 300 !important;

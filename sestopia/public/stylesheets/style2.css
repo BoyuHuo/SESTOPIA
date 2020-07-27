@@ -147,3 +147,21 @@ color: #363636;
     opacity: .5;
 
 }
+.splide__arrows{
+
+    display: flex;
+}
+.testme     {
+    position: fixed !important;
+    right: 35% !important;
+    left: unset !important;
+    z-index: 300 !important;
+}
+.custom-prev{
+    top: 95vh !important;
+}
+
+.custom-next{
+    top: 95vh !important;
+    right: 32% !important;
+}
