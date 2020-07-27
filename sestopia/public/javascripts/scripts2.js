@@ -29,11 +29,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             pagination: false,
             trimSpace: false,
             arrows: true,
-            // classes: {
-            //     arrow : 'splide__arrow testme',
-            //     prev  : 'splide__arrow--prev custom-prev',
-            //     next  : 'splide__arrow--next custom-next',
-            // },
+            classes: {
+                arrow : 'splide__arrow testme',
+                prev  : 'splide__arrow--prev custom-prev',
+                next  : 'splide__arrow--next custom-next',
+            },
     
     
         
@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         trimSpace  : false,
         pagination : false,
         arrows     : false,
+        
         
     } );
     

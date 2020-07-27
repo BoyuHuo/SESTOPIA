@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +24,8 @@
 .primaryNumbers.is-active {
     color: #363636;
     -webkit-text-stroke-width: 0px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -68,8 +77,14 @@
 .upperContiner {
     background-color: #FFFEFC;
     height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 0px 20px;
 }
@@ -82,8 +97,14 @@
 .downloadContainer {
     background-color: #FBF2E5;
     height: 27vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -105,6 +126,22 @@
     opacity: .5;
 }
 
-.test33:hover {
-    cursor: pointer;
+.splide__arrows {
+    display: flex;
+}
+
+.testme {
+    position: fixed !important;
+    right: 35% !important;
+    left: unset !important;
+    z-index: 300 !important;
+}
+
+.custom-prev {
+    top: 95vh !important;
+}
+
+.custom-next {
+    top: 95vh !important;
+    right: 32% !important;
 }
