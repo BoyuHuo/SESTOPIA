@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
     
     margin: 0;
@@ -14,6 +21,8 @@ div.mainContent{
 .mainHeader{
     /* background-color: red; */
     height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -22,9 +31,15 @@ div.mainContent{
     width: 50%;
     height: 100%;
     /* background-color: black; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
-    align-items: center;
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
 
     
 }
@@ -49,9 +64,17 @@ div.mainContent{
 
 .menuItems{
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 
 }
 
@@ -59,8 +82,13 @@ div.mainContent{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-right: 20%;
     
 
@@ -96,6 +124,8 @@ header{
 .hideFadeDown {
     position: fixed;
     bottom: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5));
+    background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
     background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
     z-index: 30;
 
@@ -106,6 +136,8 @@ header{
 .hideFadeUp{
 
     position: fixed;
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#FBF2E5));
+    background: -o-linear-gradient(bottom, transparent 0%, #FBF2E5 100%);
     background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
     z-index: 30;
     /* background: linear-gradient(to top, transparent 0%, black 100%); */
@@ -135,8 +167,12 @@ header{
 
 
 .mouseScrollIcon{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     right: 40px;
     bottom: 40px;
@@ -147,6 +183,8 @@ header{
     font-size: 9em;    
     color: #363636;
     -webkit-text-stroke-width: 0px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -166,4 +204,3 @@ header{
 .custom-next{
     top: 55vh !important;
 }
-
