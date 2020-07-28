@@ -31,14 +31,23 @@
                 </ul>
             </div>
         </header>
-        <div class="hideFadeUp hideFade" onclick="window.location.href='memberTemplate.html'"></div>
-        <div class="hideFadeDown hideFade" onclick="window.location.href='memberTemplate.html'"></div>
-        <!-- <section id="skillsN" class="members">
-            <!-- <h1 class="test33"> </h1> -->
+        <!-- <div class="hideFadeUp hideFade" onclick="window.location.href='memberTemplate.html'"></div>
+        <div class="hideFadeDown hideFade" onclick="window.location.href='memberTemplate.html'"></div> -->
+        <div class="hideFadeUp hideFade" onclick="doSomething()"></div>
+        <div class="hideFadeDown hideFade" onclick="doSomething()"></div>
+        <script type="text/javascript">
+            function doSomething() {
+                var rrr = document.querySelector("#hellos .is-active").outerText
 
+                console.log('rrr', rrr);//I was clicked
 
-
-        </section>
+                window.open(`https://example.org/${rrr}`,"_self");
+            }
+        </script>
+        
+        <!-- <section id="skillsN" class="members>
+            < h1 class="test33"> </h1>>
+        </section-->
 
 
         <section class="mouseScrollIcon">
@@ -50,31 +59,29 @@
             <p>use keyboard up and down arrow to navigate</p>
         </section>
 
-
+        
         <div class="splide">
 
             <div class="splide__track">
                 <ul class="splide__list" id="hellos">
-
-
                 </ul>
             </div>
         </div>
     </div>
 
-
+    <!-- <a href="home.html">GOTO</a> -->
 
     <script>
         json.forEach(item =>
 
 
             // document.getElementById("#hellos").innerHTML = '<ol><li>html data</li></ol>'
-            $("#hellos").append("<li class=\"splide__slide test33\" >" + item.name + "</li>")
+            $("#hellos").append("<li id=\"demo\" class=\"splide__slide test33\">" + item.name + "</li>")
         );
 
         $(".is_active").click(() => {
             alert(123);
-        })
+        });
 
 
 
