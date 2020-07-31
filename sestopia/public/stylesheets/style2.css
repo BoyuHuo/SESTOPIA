@@ -10,8 +10,8 @@
     padding: 0;
 }
 
-.primaryNumbers {
-    font-size: 15em;
+.primaryNumbers{
+    font-size: 319px;
     -webkit-text-stroke: black;
     color: white;
     -webkit-text-stroke-width: 2px;
@@ -29,49 +29,53 @@
     transition: all 0.3s;
 }
 
-#studentName {
-    position: fixed;
-    top: -50px;
-    padding-left: 100px;
-    z-index: 10;
-    width: 100%;
-    height: 20vh;
-    /* line-height: 1vh; */
-    background-color: #FBF2E5;
-    font-size: 10em;
-    text-transform: uppercase;
-    font: Medium 319px/382px Futura Md BT;
-    letter-spacing: 0px;
-    color: #363636;
+#studentName{
+position: fixed;
+top:-50px;
+padding-left: 100px;
+z-index: 10;
+width: 100%;
+/* height: calc(20vh + 50px); */
+height: 369px;
+/* line-height: 1vh; */
+background-color: #FBF2E5;
+font-size: 319px;
+text-transform: uppercase;
+font: Medium 319px/382px Futura Md BT;
+letter-spacing: 0px;
+color: #363636;
 }
-
+#primary-slider{
+    margin-bottom: 80px;
+}
 .skillContent {
-    max-width: 50%;
-    text-align: justify;
-    padding-left: 80px;
-    padding-top: 30px;
+    font: Regular 14px/22px Roboto;
+    letter-spacing: 0px;
+    font-size: 14px;
+    color: #707070;
 }
-
-.skillName {
-    font-size: 3.8em;
+.skillName{
+    font-size: 85px;
     padding-left: 60px;
     /* padding-top: 30px; */
 }
 
-.skillPosition {
-    font-size: .9em;
+.skillPosition{
+
+    font-size: 14px;
     padding-left: 70px;
 }
 
-.studentOverview {
-    height: 84vh;
-    width: 30%;
+.studentOverview{
+    height: 80vh;
+    width: 493px;
     background: red;
     position: fixed;
     /* top: 20vh; */
     right: 0;
-    top: 16vh;
+    /* top: 16vh; */
     z-index: 11;
+    border-left: black solid 2px;
 }
 
 .upperContiner {
@@ -85,46 +89,78 @@
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 0px 20px;
+        justify-content: space-around;
+    padding: 20px 20px;
 }
 
 .upperContiner div h2 {
     color: #000000;
-    font-size: 20px;
+    font-size: 14px;
+}
+
+.upperContiner div p{
+    margin-top: 10px;
+    color: #707070;
+    font-size: 14px
 }
 
 .downloadContainer {
     background-color: #FBF2E5;
-    height: 27vh;
+    height: 30%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack:distribute;
+        justify-content: space-between;
+
 }
 
 .downloadContainer div h1 {
     color: #000000;
     padding-left: 20px;
-    font-size: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+
+}
+.downloadFile{
+    position: absolute;
+    bottom: 14px; 
+    
 }
 
-.downloadContainer div h2 {
+.downloadContainer div h2{
+
     color: #000000;
-    padding-left: 20px;
-    font-size: 20px;
+    padding-left: 5px;
+    font-size: 14px;
+
 }
 
 .downloadContainer div p {
     color: #3D3D3D;
-    padding-left: 40px;
+    padding-top: 5px;
+    padding-left: 20px;
     opacity: .5;
 }
+
+#downloadButton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#documentIcon{
+    padding-left: 20px;
+}
+.downloadIcon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.splide__arrows{
 
 .splide__arrows {
     display: flex;
