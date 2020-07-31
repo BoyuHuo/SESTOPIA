@@ -1,6 +1,8 @@
 # SESTOPIA
 SOEN 6011  SOFTWARE ENGINEERING PROCESSES - Team E
 
+Demo page: http://www.baiyuhuo.com/sestopia
+
 ### Team Members (Alphabetical)
 
 Ali Zafar Iqbal *40076898*  
@@ -29,7 +31,9 @@ File Structure
   + public`//static frontend resource (html, css, js, resources)`
   + routes `//router`
   + service `//server end service`
-  + views `//abandent will deleted later`
+  + test `//test file`
+  + util `utils`
+  
 
 ---
 

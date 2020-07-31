@@ -31,14 +31,23 @@
                 </ul>
             </div>
         </header>
-        <div class="hideFadeUp hideFade"></div>
-        <div class="hideFadeDown hideFade"></div>
-        <!-- <section id="skillsN" class="members">
-            <!-- <h1 class="test33"> </h1> -->
+        <!-- <div class="hideFadeUp hideFade" onclick="window.location.href='memberTemplate.html'"></div>
+        <div class="hideFadeDown hideFade" onclick="window.location.href='memberTemplate.html'"></div> -->
+        <div class="hideFadeUp hideFade" onclick="getSkillPage()"></div>
+        <div class="hideFadeDown hideFade" onclick="getSkillPage()"></div>
+        <script type="text/javascript">
+            function getSkillPage() {
+                var rrr = document.querySelector("#hellos .is-active").outerText
 
+                console.log('rrr', rrr);//I was clicked
 
-
-        </section>
+                window.open(`https://example.org/${rrr}`,"_self");
+            }
+        </script>
+        
+        <!-- <section id="skillsN" class="members>
+            < h1 class="test33"> </h1>>
+        </section-->
 
 
         <section class="mouseScrollIcon">
@@ -46,7 +55,7 @@
             <p>Scroll To See More</p>
         </section>
 
-
+        
         <div class="splide">
 
             <div class="splide__track">
@@ -58,12 +67,17 @@
         </div>
     </div>
 
-
+    <!-- <a href="home.html">GOTO</a> -->
 
     <script>
         json.forEach(item =>
             $("#membersList").append("<li class=\"splide__slide memberItem\" >" + item.name + "</li>")
         );
+
+        $(".is_active").click(() => {
+            alert(123);
+        });
+
 
 
         windowAddMouseWheel();
