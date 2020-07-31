@@ -122,7 +122,7 @@ header {
     /* top:30vh; */
 }
 
-.test33 {
+.memberItem {
     /* background-color: red; */
     height: 33vh;
     width: 100%;
@@ -149,8 +149,7 @@ header {
     bottom: 40px;
     z-index: 101;
 }
-
-.test33.is-active {
+.memberItem.is-active {
     font-size: 9em;
     color: #363636;
     -webkit-text-stroke-width: 0px;
@@ -158,14 +157,16 @@ header {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .testme {
     position: fixed !important;
     right: 45px !important;
     left: unset !important;
     z-index: 300 !important;
+    
 }
-
+.splide__arrow{
+    display: none !important;
+}
 .custom-prev {
     top: 45vh !important;
 }
@@ -174,3 +175,8 @@ header {
     top: 55vh !important;
 }
 
+.scrollIcon{
+
+    height: 45px;
+    width: 28px;
+}

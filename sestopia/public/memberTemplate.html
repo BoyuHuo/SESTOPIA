@@ -11,7 +11,6 @@
 <body>
 
 
-    
     <h1 id="studentName"></h1>
     <div class="studentOverview">
 
@@ -43,13 +42,15 @@
             <h1>Download Report</h1>
 
         </div>
-        <div>
-            
-            <h2><span>icon</span>Download Now</h2>
+        <div class="downloadFile">
+            <div class="downloadIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" id="documentIcon" width="14px" height="18px" viewBox="0 0 100 100"><defs><style>.a{fill:none;}</style></defs><g transform="translate(-206.309 -165.088)"><rect class="a" width="100" height="100" transform="translate(206.309 165.088)"/><g transform="translate(206.31 165.088)"><g transform="translate(0)"><path class="a" d="M0,0H100V100H0Z"/></g><g transform="translate(10)"><rect width="45.825" height="10.311" transform="translate(15.588 68.23)"/><rect width="45.825" height="10.311" transform="translate(15.588 49.9)"/><path d="M54,2H14A10.029,10.029,0,0,0,4,12V92a9.987,9.987,0,0,0,9.95,10H74A10.029,10.029,0,0,0,84,92V32ZM74,92H14V12H49V37H74Z" transform="translate(-4 -2)"/></g></g></g></svg>
+            <h2>Download Now</h2>
+            </div>
             <p>wanna see more download the report</p>
-
-
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" id="downloadButton" width="100" height="100" viewBox="0 0 100 100"><defs><style>.a{fill:none;}</style></defs><g transform="translate(-1048.977 -924.977)"><rect class="a" width="100" height="100" transform="translate(1048.977 924.977)"/><path d="M0,50l8.812,8.813L43.75,23.937V100h12.5V23.937L91.125,58.875,100,50,50,0Z" transform="translate(1048.977 924.977)"/></g></svg>
+
 
     </div>
 </div>
@@ -104,6 +105,35 @@
     
         }
 );
+windowAddMouseWheel();
+
+        function windowAddMouseWheel() {
+            var scrollFunc = (e) => {
+                e = e || window.event;
+                if (e.wheelDelta) { //IE
+                    if (e.wheelDelta > 0) { //scroll up
+                        $(".splide__arrow--prev").click();
+                    }
+                    if (e.wheelDelta < 0) { //scroll down
+                        $(".splide__arrow--next").click();
+                    }
+                } else if (e.detail) { //Firefox or other webkit engine browser
+                    if (e.detail > 0) { //scroll up
+                        $(".splide__arrow--prev").click();
+                    }
+                    if (e.detail < 0) { //scroll down
+                        $(".splide__arrow--next").click();
+                    }
+                }
+            };
+            //bind scroll event
+            if (document.addEventListener) {
+                document.addEventListener('DOMMouseScroll', scrollFunc, false);
+            }
+            //trigger scroll event
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+        }
+    </script>
     </script>
 
 </body>
