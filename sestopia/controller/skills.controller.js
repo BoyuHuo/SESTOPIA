@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
     })
 });
 
-/* GET skills. */
+/* GET skills by search. */
 router.get('/search', (req, res, next) => {
     skillService.getSkillsByName("%" + req.query.name + "%").then((data) => {
         res.send(data);
