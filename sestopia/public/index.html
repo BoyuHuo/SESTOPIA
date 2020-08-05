@@ -57,9 +57,8 @@
 
     <script>
         function getSkillPage() {
-            var rrr = document.querySelector("#hellos .is-active").outerText
-            console.log('rrr', rrr); //I was clicked
-            window.open(`https://example.org/${rrr}`, "_self");
+            var name = document.querySelector("#membersList .is-active").outerText
+            window.open(`/memberTemplate.html?name=${name}`, "_self");
         }
 
         //Srcoll Event
