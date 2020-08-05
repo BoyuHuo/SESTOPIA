@@ -1,7 +1,7 @@
 # SESTOPIA
 SOEN 6011  SOFTWARE ENGINEERING PROCESSES - Team E
 
-Demo page: http://www.baiyuhuo.com/sestopia
+Demo page: http://sestopia.baiyuhuo.com
 
 ### Team Members (Alphabetical)
 
@@ -29,7 +29,7 @@ File Structure
 + sestopia `//project`
   + bin   
   + public`//static frontend resource (html, css, js, resources)`
-  + routes `//router`
+  + controller `//controller`
   + service `//server end service`
   + test `//test file`
   + util `utils`
