@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 div.mainContent {
@@ -47,19 +48,16 @@ div.mainContent {
     width: 50%;
 }
 
-.menuItems{
-
+.menuItems {
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 
 .menuItems ul {
@@ -71,9 +69,11 @@ div.mainContent {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-right: 20%;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuItems ul li {
@@ -85,6 +85,7 @@ div.mainContent {
     font: Medium 18px/21px Futura Md BT;
     letter-spacing: 0px;
     color: #1A1A1A;
+    align-items: center;
 }
 
 header {
@@ -137,18 +138,19 @@ header {
     -webkit-text-stroke-width: 2px;
 }
 
-.mouseScrollIcon{
+.mouseScrollIcon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: fixed;
     right: 40px;
     bottom: 40px;
     z-index: 101;
 }
+
 .memberItem.is-active {
     font-size: 9em;
     color: #363636;
@@ -157,16 +159,18 @@ header {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 .testme {
     position: fixed !important;
     right: 45px !important;
     left: unset !important;
     z-index: 300 !important;
-    
 }
-.splide__arrow{
+
+.splide__arrow {
     display: none !important;
 }
+
 .custom-prev {
     top: 45vh !important;
 }
@@ -175,8 +179,62 @@ header {
     top: 55vh !important;
 }
 
-.scrollIcon{
-
+.scrollIcon {
     height: 45px;
     width: 28px;
+}
+
+
+/* Style the search field */
+
+form.search-group {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s;
+}
+
+form.search-group:hover input[type=text] {
+    width: 260px;
+    background: #ffffff;
+}
+
+form.search-group input[type=text] {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 160px;
+    background: #FBF2E5;
+    transition: all 0.5s;
+}
+
+
+/* Style the submit button */
+
+form.search-group button {
+    float: left;
+    width: 40px;
+    padding: 5px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+form.search-group button:hover {
+    background: #3d464e;
+}
+
+
+/* Clear floats */
+
+form.search-group::after {
+    content: "";
+    clear: both;
+    display: table;
 }
