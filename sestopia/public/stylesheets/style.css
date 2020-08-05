@@ -187,19 +187,19 @@ header {
 
 /* Style the search field */
 
-form.search-group {
+div.search-group {
     width: 300px;
     display: flex;
     justify-content: flex-end;
     transition: all 0.5s;
 }
 
-form.search-group:hover input[type=text] {
+div.search-group:hover input[type=text] {
     width: 260px;
     background: #ffffff;
 }
 
-form.search-group input[type=text] {
+div.search-group input[type=text] {
     padding: 5px;
     font-size: 17px;
     border: 1px solid grey;
@@ -212,7 +212,7 @@ form.search-group input[type=text] {
 
 /* Style the submit button */
 
-form.search-group button {
+div.search-group button {
     float: left;
     width: 40px;
     padding: 5px;
@@ -226,14 +226,14 @@ form.search-group button {
     transition: all 0.5s;
 }
 
-form.search-group button:hover {
+div.search-group button:hover {
     background: #3d464e;
 }
 
 
 /* Clear floats */
 
-form.search-group::after {
+div.search-group::after {
     content: "";
     clear: both;
     display: table;
