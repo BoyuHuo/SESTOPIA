@@ -1,15 +1,20 @@
-var json = [
-    { "name": "Dhruv" },
-    { "name": "Uchechukwu" },
-    { "name": "Micheal" },
-    { "name": "Baiyu" },
-    { "name": "Micheal" },
-    { "name": "Shahryar" },
-    { "name": "Ali" },
-    { "name": "Mahsa" }
-];
+getAllMembers();
 
-window.addEventListener('DOMContentLoaded', (event) => {
+//Get all members data
+function getAllMembers() {
+    request('/api/skills', 'GET', null).then(res => {
+        updateData(res);
+    }, err => {
+        alert(res.MSG);
+    })
+}
+
+//Update list data, remount the component
+function updateData(data) {
+    data.forEach(item =>
+        $("#membersList").append("<li class=\"splide__slide memberItem\" >" + item.student_name + "</li>")
+    );
+
     new Splide('.splide', {
         focus: 'center',
         perPage: 3,
@@ -26,20 +31,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
             prev: 'splide__arrow--prev custom-prev',
             next: 'splide__arrow--next custom-next',
         },
-
-
     }).mount();
-
-});
-
-
-// Need load common.js first
-function getAllMembers() {
-    request('/api/skills', 'GET', null).then(res => {
-        console.log(res)
-    }, err => {
-        alert(res.MSG);
-    })
 }
-
-getAllMembers();
