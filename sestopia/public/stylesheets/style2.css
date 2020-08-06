@@ -28,18 +28,25 @@
         -o-transition: all 0.3s;
         transition: all 0.3s;
     }
-    
-    #studentName {
-        position: fixed;
-        top: -50px;
-        padding-left: 100px;
-        z-index: 10;
-        width: 100%;
-        /* height: calc(20vh + 50px); */
-        height: 369px;
-        /* line-height: 1vh; */
+    header {
+        height: 20vh;
         background-color: #FBF2E5;
-        font-size: 319px;
+    
+    }
+    #studentName {
+        /* position: fixed; */
+        /* top: -50px; */
+        /* padding-left: 100px; */
+        /* z-index: 10; */
+        /* width: 100%; */
+        /* height: calc(20vh + 50px); */
+        /* height: 369px; */
+        /* line-height: 1vh; */
+        /* background-color: #FBF2E5; */
+        position: relative;
+        top: -.34em;
+        left: .5em;
+        font-size: 10em;
         text-transform: uppercase;
         font: Medium 319px/382px Futura Md BT;
         letter-spacing: 0px;
