@@ -46,7 +46,7 @@ function searchSkills() {
 function updateData(data) {
     $("#membersList").empty();
     data.forEach(item =>
-        $("#membersList").append("<li class=\"splide__slide memberInfo\" >" + "<div><h1 class=\"a\" >" + item.name+ "</h1>" + "<h2 class=\"b\" >" + item.name+ "</h2>" + "<h3 class=\"c\" >" + item.knowledge_area+ "</h3></div>" + "</li>")
+        $("#membersList").append("<li class=\"splide__slide memberInfo\" >" + "<div><h1 class=\"a\" >" + item.knowledge_area+ "</h1>" + "<h2 class=\"b\" >" + item.student_name+ "</h2>" + "<h3 class=\"c\" >" + item.name+ "</h3></div>" + "</li>")
         // item.knowledge_area
     );
     
