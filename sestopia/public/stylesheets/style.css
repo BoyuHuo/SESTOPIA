@@ -36,7 +36,8 @@ div.mainContent {
 }
 
 .logoContainer h2 {
-    font: Medium 18px/21px Futura Md BT;
+    /* font: Medium 18px/21px Futura Md BT; */
+    font-size: 1.5em;
     letter-spacing: 6.07px;
     color: #1A1A1A;
     text-transform: uppercase;
@@ -132,7 +133,7 @@ header {
     letter-spacing: 0px;
     color: #363636;
     /* color: darken(red); */
-    font-size: 8em;
+    /* font-size: 7em; */
     -webkit-text-stroke: black;
     color: white;
     -webkit-text-stroke-width: 2px;
@@ -146,18 +147,57 @@ header {
     -ms-flex-align: center;
     align-items: center;
     position: fixed;
-    right: 40px;
-    bottom: 40px;
+    right: 0%;
+    bottom: 5%;
     z-index: 101;
 }
+.memberInfo{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* max-width: 700px; */
+align-self: center;
+}
 
-.memberItem.is-active {
-    font-size: 9em;
+.memberInfo h1 {
+    font-size: 6.5em;
+    -webkit-text-stroke: black;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+
+    }
+
+
+
+.memberInfo.is-active h1{
+    font-size: 7.5em;
     color: #363636;
     -webkit-text-stroke-width: 0px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+.memberInfo h2{
+    display: none;
+    
+}
+
+.memberInfo.is-active h2{
+    display: block;
+    font-size: .9em;
+
+}
+.memberInfo h3{
+    display: none;
+    
+}
+
+.memberInfo.is-active h3{
+    display: block;
+    color: #101010;
+    font-size: .9em;
+
 }
 
 .testme {
@@ -180,8 +220,8 @@ header {
 }
 
 .scrollIcon {
-    height: 45px;
-    width: 28px;
+    height: 100%;
+    width: 20%;
 }
 
 
@@ -238,3 +278,41 @@ div.search-group::after {
     clear: both;
     display: table;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* queries */
+
+@media only screen and (max-width: 1440px) {
+
+
+    .mouseScrollIcon {
+        
+        right: 1%;
+        bottom: 5%;
+        z-index: 101;
+    }
+
+    .memberInfo h1 {
+        font-size: 3.5em;
+    
+        }
+    
+    .memberInfo.is-active h1{
+        font-size: 4.5em;
+
+    }
+
+
+
+
+
+  }

@@ -21,6 +21,7 @@ getAllMembers();
 //Get all members data
 function getAllMembers() {
     request('/api/skills', 'GET', null).then(res => {
+        console.log(res);
         updateData(res);
     }, err => {
         alert(res.MSG);
@@ -45,7 +46,13 @@ function searchSkills() {
 function updateData(data) {
     $("#membersList").empty();
     data.forEach(item =>
-        $("#membersList").append("<li class=\"splide__slide memberItem\" >" + item.student_name + "</li>")
+        $("#membersList").append("<li class=\"splide__slide memberInfo\" >" + "<div><h1 class=\"a\" >" + item.knowledge_area+ "</h1>" + "<h2 class=\"b\" >" + item.student_name+ "</h2>" + "<h3 class=\"c\" >" + item.name+ "</h3></div>" + "</li>")
+        // item.knowledge_area
     );
+    
     splide.mount();
 }
+
+
+
+
