@@ -42,6 +42,8 @@ function updateData(data) {
     console.log(data);
 
     $("#studentName").append(data.student_name)
+    $("#knowledgeArea").append(data.knowledge_area)
+    $("#theSkill").append(data.name)
 
     var skillData = [
         { skillPosition: "1 skill out of 12", name: "Name of Skill", skill: data.name },
