@@ -261,4 +261,30 @@
 
   }
 
+  @media only screen and (max-height: 700px) {
+
+    .upperContiner div p {
+        font-size: 10px;
+        
+    }
+    .participation svg{
+
+        height: 25px;
+    }
+
+    .downloadContainer h1{
+        font-size: 10px;
+
+    }
+
+    .downloadContainer h2{
+        font-size: 10px;
+
+    }
+
+    .downloadContainer p{
+        font-size: 10px;
+
+    }
+  }
   
