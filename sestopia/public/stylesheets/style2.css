@@ -43,10 +43,10 @@
         /* height: 369px; */
         /* line-height: 1vh; */
         /* background-color: #FBF2E5; */
-        position: relative;
+        position: absolute;
         top: -.34em;
         left: .5em;
-        font-size: 10em;
+        font-size: 8em;
         text-transform: uppercase;
         font: Medium 319px/382px Futura Md BT;
         letter-spacing: 0px;
@@ -65,7 +65,7 @@
     }
     
     .skillName {
-        font-size: 85px;
+        font-size: 3em;
         padding-left: 60px;
         /* padding-top: 30px; */
     }
@@ -154,8 +154,10 @@
     
     #downloadButton {
         position: absolute;
-        bottom: 0;
+        bottom: 12px;
         right: 0;
+        height: 40px;
+    transform: rotate(45deg);
     }
     
     #documentIcon {
@@ -181,11 +183,27 @@
     
     .custom-prev {
         top: 95vh !important;
+        display: none !important;
     }
     
     .custom-next {
         top: 95vh !important;
         right: 32% !important;
+        display: none !important;
+    }
+
+    .participation{
+        display:flex;
+        padding-top: 10px;
+
+    }
+
+    .participation svg{
+        height: 39px;
+        padding: 5px;
+        
+
+        
     }
 
 
@@ -195,10 +213,17 @@
 
 /* queries */
 
+@media only screen and (max-width: 1900px) {
+
+    #studentName {
+        font-size: 5.5em;
+    }
+
+}
 @media only screen and (max-width: 1440px) {
 
     #studentName {
-        font-size: 7em;
+        font-size: 5.5em;
     }
     
     .primaryNumbers{
@@ -207,6 +232,31 @@
 
     .upperContiner{
         padding: 30px 20px 20px 20px;
+    }
+    .downloadContainer div p{
+        font-size: .95em;
+
+    }
+    .upperContiner div h2{
+        padding-top:7px ;
+    }
+
+    .participation svg{
+        height: 32px;
+        padding: 5px;
+    }
+
+  }
+
+    
+
+
+@media only screen and (max-width: 1024px) {
+
+    .skillName {
+        font-size: 2.5em;
+        padding-left: 45px;
+        /* padding-top: 30px; */
     }
 
   }
