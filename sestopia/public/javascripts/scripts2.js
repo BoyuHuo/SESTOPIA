@@ -42,9 +42,19 @@ function updateData(data) {
     console.log(data);
 
     $("#studentName").append(data.student_name)
+    $("#knowledgeArea").append(data.knowledge_area)
+    $("#theSkill").append(data.name)
+    testArray = [0,1,1,0]
+    for(var i = 0; i<testArray.length;i++){
+        if(testArray[i] == 0){
+            $("#responsibility"+ i).css('opacity', '0.33');
+
+        }
+    }
+    
 
     var skillData = [
-        { skillPosition: "1 skill out of 12", name: "Name of Skill", skill: data.name },
+        { skillPosition: "", name: data.name, skill: data.name },
         { skillPosition: "2 skill out of 12", name: "Classification of Skill", skill: data.classification },
         { skillPosition: "3 skill out of 12", name: "Prerequisites for Skill", skill: data.prerequisites },
         { skillPosition: "4 skill out of 12", name: "Software Engineering Knowledge Area(s)", skill: data.knowledge_area },
@@ -59,7 +69,19 @@ function updateData(data) {
     ];
 
     skillData.forEach(item => {
-        $("#secondSliderContent").append("<li class=\"splide__slide skillItem\" >" + "<h1 class=\"skillName\">" + item.name + "</h1>" + "<h2 class=\"skillPosition\" >" + item.skillPosition + "</h2>" + "<p class=\"skillContent\">" + item.skill + "</p>" + "</li>");
+
+        if(item.name==item.skill){
+            $("#secondSliderContent").append("<li class=\"splide__slide skillItem\" >" + "<h1 class=\"skillName\">" + item.name + "</h1></li>");
+
+
+
+        }else{
+
+            $("#secondSliderContent").append("<li class=\"splide__slide skillItem\" >" + "<h1 class=\"skillName\">" + item.name + "</h1>" + "<h2 class=\"skillPosition\" >" + item.skillPosition + "</h2>" + "<p class=\"skillContent\">" + item.skill + "</p>" + "</li>");
+
+        }
+
+
     })
 
     secondarySlider.mount();
