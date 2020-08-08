@@ -7,14 +7,12 @@
 div.mainContent {
     height: 30vh;
     text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5));
+    background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
+    background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
 }
 
-
-
-
-
 .about{
-        
         position: absolute;
         top: -50px;
         text-align: center;
@@ -45,13 +43,13 @@ div.mainContent {
 
 .studentOverview {
     height: 70vh;
-    width: 35%;
+    width: 50%;
     position: fixed;
     /* top: 20vh; */
     right: 0;
     /* top: 16vh; */
-    z-index: 11;
-
+    /* z-index: 10; */
+    padding-left: 15rem;
 }
 
 .studentOverview2 {
@@ -61,11 +59,13 @@ div.mainContent {
     /* top: 20vh; */
     left: 0;
     /* top: 16vh; */
-    z-index: 11;
+    /* z-index: 10; */
+    padding-left: 5rem;
+
+
 }
 
 .upperContiner {
-    background-color: #FFFEFC;
     height: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -77,6 +77,19 @@ div.mainContent {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 20px 20px;
+}
+
+.upperContiner2 {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
 }
 
 .left{
@@ -107,6 +120,11 @@ div.mainContent {
     font-size: 35px;
 }
 
+.upperContiner2 div h2 {
+    color: #000000;
+    font-size: 35px;
+}
+
 .right{
     list-style-type: none;
 }
@@ -117,10 +135,6 @@ div.mainContent {
     width: 30%
 }
 
-.leftParagraph1{
-    float: left;
-    width: 15%;
-}
 
 .upperContiner div p {
     margin-top: 10px;
@@ -128,7 +142,23 @@ div.mainContent {
     font-size: 14px
 }
 
+.upperContiner2 div p {
+    margin-top: 10px;
+    color: #707070;
+    font-size: 14px
+}
 
+.pageContent .studentOverview {
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#FBF2E5));
+    background: -o-linear-gradient(bottom, transparent 0%, #FBF2E5 100%);
+    background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
+}
+
+.pageContent .studentOverview2 {
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#FBF2E5));
+    background: -o-linear-gradient(bottom, transparent 0%, #FBF2E5 100%);
+    background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
+}
 
 
 
