@@ -36,7 +36,8 @@ div.mainContent {
 }
 
 .logoContainer h2 {
-    font: Medium 18px/21px Futura Md BT;
+    /* font: Medium 18px/21px Futura Md BT; */
+    font-size: 1.5em;
     letter-spacing: 6.07px;
     color: #1A1A1A;
     text-transform: uppercase;
@@ -46,9 +47,6 @@ div.mainContent {
 .menuItems {
     height: 100%;
     width: 50%;
-}
-
-.menuItems {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -86,6 +84,33 @@ div.mainContent {
     letter-spacing: 0px;
     color: #1A1A1A;
     align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .logoContainer {
+        width: 100%;
+        height: 100%;
+    }
+    .mainHeader {
+        display: block;
+        text-align: center;
+        height: 10vh;
+    }
+    .logoContainer h2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .menuItems {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .menuItems ul {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
 header {
@@ -132,7 +157,7 @@ header {
     letter-spacing: 0px;
     color: #363636;
     /* color: darken(red); */
-    font-size: 8em;
+    /* font-size: 7em; */
     -webkit-text-stroke: black;
     color: white;
     -webkit-text-stroke-width: 2px;
@@ -146,18 +171,53 @@ header {
     -ms-flex-align: center;
     align-items: center;
     position: fixed;
-    right: 40px;
-    bottom: 40px;
+    right: 0%;
+    bottom: 5%;
     z-index: 101;
 }
 
-.memberItem.is-active {
-    font-size: 9em;
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 700px; */
+    align-self: center;
+}
+
+.memberInfo h1 {
+    font-size: 6.5em;
+    -webkit-text-stroke: black;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+}
+
+.memberInfo.is-active h1 {
+    font-size: 7.5em;
     color: #363636;
     -webkit-text-stroke-width: 0px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.memberInfo h2 {
+    display: none;
+}
+
+.memberInfo.is-active h2 {
+    display: block;
+    font-size: .9em;
+}
+
+.memberInfo h3 {
+    display: none;
+}
+
+.memberInfo.is-active h3 {
+    display: block;
+    color: #101010;
+    font-size: .9em;
 }
 
 .testme {
@@ -180,8 +240,8 @@ header {
 }
 
 .scrollIcon {
-    height: 45px;
-    width: 28px;
+    height: 100%;
+    width: 20%;
 }
 
 
@@ -192,11 +252,6 @@ div.search-group {
     display: flex;
     justify-content: flex-end;
     transition: all 0.5s;
-}
-
-div.search-group:hover input[type=text] {
-    width: 260px;
-    background: #ffffff;
 }
 
 div.search-group input[type=text] {
@@ -252,4 +307,58 @@ div.search-group::after {
     background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
     background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
     z-index: 300;
+
+@media only screen and (min-width: 961px) {
+    div.search-group:hover input[type=text] {
+        width: 260px;
+        background: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    div.search-group input[type=text] {
+        width: 100%;
+        box-sizing: content-box;
+    }
+    div.search-group {
+        width: 100%;
+        justify-content: center;
+    }
+    #about {
+        text-align: right;
+    }
+}
+
+
+/* queries */
+
+@media only screen and (max-width: 1600px) {
+    .mouseScrollIcon {
+        right: 1%;
+        bottom: 5%;
+        z-index: 101;
+    }
+    .memberInfo h1 {
+        font-size: 3em;
+    }
+    .memberInfo.is-active h1 {
+        font-size: 4em;
+    }
+}
+
+
+/* queries */
+
+@media only screen and (max-width: 960px) {
+    .mouseScrollIcon {
+        right: 1%;
+        bottom: 5%;
+        z-index: 101;
+    }
+    .memberInfo h1 {
+        font-size: 0.5em;
+    }
+    .memberInfo.is-active h1 {
+        font-size: 1.5em;
+    }
 }
