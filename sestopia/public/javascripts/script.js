@@ -5,7 +5,7 @@ var splide = new Splide('.splide', {
     direction: 'ttb',
     height: '100vh',
     perMove: 1,
-    speed: "300",
+    speed: '300',
     pagination: false,
     trimSpace: false,
     arrows: true,
@@ -25,7 +25,7 @@ function getAllMembers() {
         updateData(res);
     }, err => {
         alert(err.MSG);
-    })
+    });
 }
 
 //Get skills by search content
@@ -34,35 +34,33 @@ function getSkills(keyworkds) {
         updateData(res);
     }, err => {
         alert(res.MSG);
-    })
+    });
 }
-
 
 
 //Search function
 function searchSkills() {
-    let token = $("#skill-search").val()
+    let token = $('#skill-search').val();
     
-    if(/^[a-zA-Z- ]*$/.test(token) == false){
-        alert("No special characters allowed")
-        return false
+    if (/^[a-zA-Z- ]*$/.test(token) == false) {
+        alert('No special characters allowed');
+        
+return false;
     }
-    getSkills($("#skill-search").val());
+    getSkills($('#skill-search').val());
 
 
 }
 
 //Update list data, remount the component
 function updateData(data) {
-    $("#membersList").empty();
+    $('#membersList').empty();
     data.forEach(item =>
-        $("#membersList").append("<li class=\"splide__slide memberInfo\" >" + "<div><h1 class=\"a\" >" + item.knowledge_area+ "</h1>" + "<h2 class=\"b\" >" + item.student_name+ "</h2>" + "<h3 class=\"c\" >" + item.name+ "</h3></div>" + "</li>")
+        $('#membersList').append('<li class="splide__slide memberInfo" >' + '<div><h1 class="a" >' + item.knowledge_area+ '</h1>' + '<h2 class="b" >' + item.student_name+ '</h2>' + '<h3 class="c" >' + item.name+ '</h3></div>' + '</li>')
         // item.knowledge_area
     );
     
     splide.mount();
 }
-
-
 
 

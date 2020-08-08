@@ -1,4 +1,4 @@
-var skillService = require("../service/skillService");
+var skillService = require('../service/skillService');
 var assert = require('assert');
 
 describe('Member', function() {
@@ -7,10 +7,9 @@ describe('Member', function() {
             skillService.getAllSkills(function(data) {
                 assert.equal(data.length, 11);
             }, function(err) {
-            })
+                alert(err);
+            });
         });
     });
 
 });
-
-

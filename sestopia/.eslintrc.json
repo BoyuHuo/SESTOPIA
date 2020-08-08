@@ -2,7 +2,8 @@
     "env": {
         "es6": true,
         "node": true,
-        "jquery": true
+        "jquery": true,
+        "jest": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -10,8 +11,8 @@
     },
     "rules": {
         "no-console": 0,
-        "no-unused-vars": "error",
-        "no-use-before-define": "error",
+        "no-unused-vars": "off",
+        "no-use-before-define": "off",
         "linebreak-style": [
             "error",
             "unix"
@@ -91,8 +92,9 @@
             }
         ],
         "no-shadow-restricted-names": "error",
-        "no-undef-init": "always",
+        "no-undef-init": "off",
         "keyword-spacing": "error",
+        "no-undef":"off",
         "space-before-blocks": [
             "error",
             "always"

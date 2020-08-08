@@ -5,7 +5,8 @@
     "scripts": {
         "start": "node ./bin/www",
         "test": "mocha",
-        "lint": "eslint --ext .js --ext .jsx --ext .vue ./"
+        "lint": "eslint --ext .js --ext .jsx --ext .vue ./",
+        "fix": "eslint --fix ."
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",

@@ -7,5 +7,5 @@ function getAllMembers() {
         updateData(res);
     }, err => {
         alert(res.MSG);
-    })
+    });
 }
