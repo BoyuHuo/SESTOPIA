@@ -21,11 +21,16 @@
                 <ul>
                     <li>
                         <div class="search-group">
-                            <input id="skill-search" type="text" placeholder="Search.." name="search">
-                            <button onclick="searchSkills()"><i class="fa fa-search"></i></button>
+                            <form onsubmit="return searchSkills()">
+                                <input id="skill-search" type="text" 
+                                placeholder="Search.." name="search" 
+                                >
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                            
                         </div>
                     </li>
-                    <li id="about">About Us</li>
+                    <li ><a href="./about.html">About Us</a></li>
                 </ul>
             </div>
         </header>
