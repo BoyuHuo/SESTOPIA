@@ -307,17 +307,14 @@ div.search-group::after {
 }
 
 @media only screen and (max-width: 960px) {
-    div.search-group form input[type=text] {
+    div.search-group input[type=text] {
         width: 100%;
-        box-sizing: content-box;
+        margin-left: auto;
+        margin-right: auto;
     }
     div.search-group {
         width: 100%;
         justify-content: center;
-    }
-    form {
-        width: 100%;
-        display: flex;
     }
     #about {
         text-align: right;
