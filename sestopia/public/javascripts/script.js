@@ -23,7 +23,7 @@ function getAllMembers() {
     request('/api/skills', 'GET', null).then(res => {
         updateData(res);
     }, err => {
-        alert(res.MSG);
+        alert(err.MSG);
     })
 }
 
@@ -36,9 +36,19 @@ function getSkills(keyworkds) {
     })
 }
 
-//Serach function
+
+
+//Search function
 function searchSkills() {
+    let token = $("#skill-search").val()
+    
+    if(/^[a-zA-Z- ]*$/.test(token) == false){
+        alert("No special characters allowed")
+        return false
+    }
     getSkills($("#skill-search").val());
+
+
 }
 
 //Update list data, remount the component
