@@ -1,176 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-div.mainContent {
-    height: 30vh;
-    text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5));
-    background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
-    background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .about{
-        position: absolute;
-        top: -50px;
-        text-align: center;
-        padding-left: 0px;
-        z-index: 10;
-        width: 100%;
-        /* height: calc(20vh + 50px); */
-        height: 369px;
-        /* line-height: 1vh; */
-        font-size: 250px;
-        text-transform: uppercase;
-        font: Medium 319px/382px Futura Md BT;
-        letter-spacing: 0px;
-        color: #363636;
+    /* top: -50px; */
+    text-align: center;
+    padding-left: 0px;
+    z-index: 10;
+    width: 100%;
+    margin-bottom:100px;
+    /* height: calc(20vh + 50px); */
+    /* height: 369px; */
+    /* line-height: 1vh; */
+    font-size: 150px;
+    text-transform: uppercase;
+    font: Medium 319px/382px Futura Md BT;
+    letter-spacing: 0px;
+    color: #363636;        
 }
 
-.left{
-    width: 50%;
-    height: 100%;
-    /* background-color: black; */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
+.container-fluid{
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5)); 
+    background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
+    background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
 
-.studentOverview {
-    height: 70vh;
-    width: 50%;
-    position: fixed;
-    /* top: 20vh; */
-    right: 0;
-    /* top: 16vh; */
-    /* z-index: 10; */
-    padding-left: 15rem;
-}
-
-.studentOverview2 {
-    height: 70vh;
-    width: 50%;
-    position: fixed;
-    /* top: 20vh; */
-    left: 0;
-    /* top: 16vh; */
-    /* z-index: 10; */
-    padding-left: 5rem;
-
-
-}
-
-.upperContiner {
-    height: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 20px 20px;
-}
-
-.upperContiner2 {
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-}
-
-.left{
-    left: 0;
-    width: 25%;
-    position: fixed;
-}
-
-.area{
-    right: 0;
-    color: #707070;
-    margin-bottom: 10px;
-    font-size: 14px
 }
 
 .name{
-    right: 0;
-    width: 40%;
-    float: right;
-    position: fixed;
-    max-width: 300px;
-    min-width: 300px;
-    vertical-align: top;
+    font-size: 12px;
 }
 
-.upperContiner div h2 {
-    color: #000000;
-    font-size: 35px;
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+.spacer {
+    padding-top: 80px;
+    padding-bottom: 40px
 }
 
-.upperContiner2 div h2 {
-    color: #000000;
-    font-size: 35px;
-}
-
-.right{
-    list-style-type: none;
-}
-
-
-.constructionArtifact{
-    height: 23.33vh;
-    width: 30%
-}
-
-
-.upperContiner div p {
-    margin-top: 10px;
-    color: #707070;
-    font-size: 14px
-}
-
-.upperContiner2 div p {
-    margin-top: 10px;
-    color: #707070;
-    font-size: 14px
-}
-
-.pageContent .studentOverview {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#FBF2E5));
-    background: -o-linear-gradient(bottom, transparent 0%, #FBF2E5 100%);
-    background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
-}
-
-.pageContent .studentOverview2 {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#FBF2E5));
-    background: -o-linear-gradient(bottom, transparent 0%, #FBF2E5 100%);
-    background: linear-gradient(to top, transparent 0%, #FBF2E5 100%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
+.container {
+    @media (max-width: @screen-xs-min) {
+      font-size: 10px;
+    }
+  
+    @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+      font-size: 30px;
+    }
+  
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      font-size: 50px;
+    }
+  
+    @media (min-width: @screen-md-min) {
+      font-size: 100px;
+    }
+  }
 
 
 
