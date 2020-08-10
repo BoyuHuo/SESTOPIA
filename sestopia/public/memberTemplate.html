@@ -102,34 +102,7 @@
     <script src="./javascripts/scripts2.js"></script>
 
     <script>
-        windowAddMouseWheel();
 
-        function windowAddMouseWheel() {
-            var scrollFunc = (e) => {
-                e = e || window.event;
-                if (e.wheelDelta) { //IE
-                    if (e.wheelDelta > 0) { //scroll up
-                        $(".splide__arrow--prev").click();
-                    }
-                    if (e.wheelDelta < 0) { //scroll down
-                        $(".splide__arrow--next").click();
-                    }
-                } else if (e.detail) { //Firefox or other webkit engine browser
-                    if (e.detail > 0) { //scroll up
-                        $(".splide__arrow--prev").click();
-                    }
-                    if (e.detail < 0) { //scroll down
-                        $(".splide__arrow--next").click();
-                    }
-                }
-            };
-            //bind scroll event
-            if (document.addEventListener) {
-                document.addEventListener('DOMMouseScroll', scrollFunc, false);
-            }
-            //trigger scroll event
-            window.onmousewheel = document.onmousewheel = scrollFunc;
-        }
     </script>
 
 </body>

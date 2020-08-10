@@ -64,10 +64,16 @@
         padding-left: 60px;
         max-width: 1300px;
         height: 400px;
-        overflow-y: auto;
+        overflow-y: hidden;
         overflow-x: hidden;
+        transition: all 0.5s;
     }
     
+
+    .skillContent:hover {
+        overflow-y: auto;
+        transition: all 0.5s;
+    }
     .skillName {
         font-size: 3em;
         padding-left: 60px;
@@ -261,8 +267,9 @@
             padding: 10px 45px 0px 45px;
             max-width: 1000px;
             height: 250px;
-            overflow-y: auto;
+            overflow-y: hidden;
             overflow-x: hidden;
+            transition: all 0.5s;
         }
     }
     

@@ -91,7 +91,38 @@ function updateData(data) {
     secondarySlider.mount();
 
     primarySlider.sync(secondarySlider).mount();
+
+
+  //  windowAddMouseWheel();
+       
 }
+
+ function windowAddMouseWheel() {
+            var scrollFunc = (e) => {
+                e = e || window.event;
+                if (e.wheelDelta) { //IE
+                    if (e.wheelDelta > 0) { //scroll up
+                        $(".splide__arrow--prev").click();
+                    }
+                    if (e.wheelDelta < 0) { //scroll down
+                        $(".splide__arrow--next").click();
+                    }
+                } else if (e.detail) { //Firefox or other webkit engine browser
+                    if (e.detail > 0) { //scroll up
+                        $(".splide__arrow--prev").click();
+                    }
+                    if (e.detail < 0) { //scroll down
+                        $(".splide__arrow--next").click();
+                    }
+                }
+            };
+            //bind scroll event
+            if (document.addEventListener) {
+                document.getElementById("primary-slider-track").addEventListener('DOMMouseScroll', scrollFunc, false);
+            }
+            //trigger scroll event
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+        }
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
