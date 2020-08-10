@@ -14,7 +14,7 @@ let getAllSkills = function() {
 
 let getSkillsByName = function(name) {
     return new Promise(function(resolve, reject) {
-        let sql = 'SELECT skills.id as id, skills.name as name, classification, prerequisites,knowledge_area, rationale,roles_for_skill,related_activities,real_world_scenario,role_of_academia, tools, self_assessment, reference, members.name as student_name, members.sno as student_no, members.student_overview as student_overview, members.responsibility as responsibility FROM skills,members where skills.id= members.skill_id AND (skills.NAME LIKE ' + mysql.pool.escape(name) + ' or members.name LIKE ' + mysql.pool.escape(name) + ' or skills.knowledge_area LIKE ' + mysql.pool.escape(name) + ') ';
+        let sql = 'SELECT skills.id as id, skills.name as name, classification, prerequisites,knowledge_area, rationale,roles_for_skill,related_activities,real_world_scenario,role_of_academia, tools, self_assessment, reference, members.name as student_name, members.sno as student_no, members.student_overview as student_overview, members.responsibility as responsibility, skills.introduction as introduction,skills.download as download FROM skills,members where skills.id= members.skill_id AND (skills.NAME LIKE ' + mysql.pool.escape(name) + ' or members.name LIKE ' + mysql.pool.escape(name) + ' or skills.knowledge_area LIKE ' + mysql.pool.escape(name) + ') ';
 
         mysql.query(sql, function(err, data, field) {
             if (err) {

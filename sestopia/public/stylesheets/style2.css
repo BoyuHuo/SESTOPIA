@@ -16,7 +16,6 @@
         color: white;
         -webkit-text-stroke-width: 2px;
     }
-    
     /* .slidersC {
         margin-top: 20vh;
     } */
@@ -28,11 +27,12 @@
         -o-transition: all 0.3s;
         transition: all 0.3s;
     }
+    
     header {
         height: 20vh;
         background-color: #FBF2E5;
-    
     }
+    
     #studentName {
         /* position: fixed; */
         /* top: -50px; */
@@ -52,7 +52,6 @@
         letter-spacing: 0px;
         color: #363636;
     }
-    
     /* #primary-slider {
         margin-bottom: 80px;
     } */
@@ -62,6 +61,11 @@
         letter-spacing: 0px;
         font-size: 14px;
         color: #707070;
+        padding-left: 60px;
+        max-width: 1300px;
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .skillName {
@@ -157,7 +161,7 @@
         bottom: 12px;
         right: 0;
         height: 40px;
-    transform: rotate(45deg);
+        transform: rotate(45deg);
     }
     
     #documentIcon {
@@ -168,6 +172,21 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+    
+    .downloadIcon a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .downloadIcon a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .downloadIcon a:hover {
+        text-decoration: none;
+        color: #707070;
     }
     
     .splide__arrows {
@@ -191,272 +210,215 @@
         right: 32% !important;
         display: none !important;
     }
-
-    .participation{
-        display:flex;
+    
+    .participation {
+        display: flex;
         padding-top: 10px;
-
     }
-
-    .participation svg{
+    
+    .participation svg {
         height: 39px;
         padding: 5px;
-        
-
-        
     }
-
-
-
-
-
-
-/* queries */
-
-@media only screen and (max-width: 1900px) {
-
-    #studentName {
-        font-size: 5.5em;
-    }
-
-}
-@media only screen and (max-width: 1440px) {
-
-    #studentName {
-        font-size: 5.5em;
-    }
+    /* queries */
     
-    .primaryNumbers{
-        font-size: 12em;
-    }
-
-    .upperContiner{
-        padding: 30px 20px 20px 20px;
-    }
-    .downloadContainer div p{
-        font-size: .95em;
-
-    }
-    .upperContiner div h2{
-        padding-top:7px ;
-    }
-
-    .participation svg{
-        height: 32px;
-        padding: 5px;
-    }
-
-  }
-
-    
-
-
-
-
-  @media only screen and (max-height: 700px) {
-
-    .upperContiner div p {
-        font-size: 10px;
-        
-    }
-    .participation svg{
-
-        height: 25px;
-    }
-
-    .downloadContainer h1{
-        font-size: 10px;
-
-    }
-
-    .downloadContainer h2{
-        font-size: 10px;
-
-    }
-
-    .downloadContainer p{
-        font-size: 10px;
-
-    }
-  }
-  
-
-
-  @media only screen and (max-width: 1024px) {
-  .upperContiner div h2 {
-    color: #000000;
-    font-size: 13px;
-    }
-    .upperContiner div p {
-        margin-top: 5px;
-        color: #707070;
-        font-size: 12px;
-    }
-
-    .downloadContainer div h1 {
-        
-        font-size: 13px;
-    }
-
-    .downloadFile {
-        bottom: 8px;
-
-    }
-    .downloadContainer div p {
-        font-size: 12px;
-    }
-
-
-    #downloadButton {
-        bottom: 23px;
-        right: -17px;
-        height: 30px;
-    }
-
-    .skillName {
-        font-size: 2.5em;
-        padding-left: 35px;
-        max-width: 661px;
-    }
-
-    .skillPosition {
-        font-size: 14px;
-        padding-left: 35px;
-        padding-top: 20px;
-    }
-    .skillContent {
-        font-size: 15px;
-        padding: 10px 45px 0px 45px;
-        max-width: 660px;
-    }
-  }
-
-
-
-  @media only screen and (max-width: 416px){
-    header {
-        height: 11vh;
-    }
-    #studentName {
-        font-size: 2.5em;
-    }
-
-    .studentOverview {
-        height: 90vh;
-    }
-    .upperContiner {
-        padding: 10px;
-    }
-
-
-    
-    .upperContiner div h2 {
-        font-size: 10px;
-     
-    }
-
-    .upperContiner div p {
-        margin-top: 3px;
-        font-size: 9px;
-    }
-    .upperContiner {
-        height: 83%;
-    }
-
-    .downloadContainer {
-        height: 20%;
-    }
-    .downloadContainer > div:first-child{
-
-        display: none;
-    }
-
-    .downloadContainer div h2 {
-        padding-left: 3px;
-        font-size: 11px;
-    }
-
-    .downloadFile {
-        bottom: 17px;
-    }
-    .downloadContainer div p {
-        display: none;
-    }
-    .downloadFile {
-        top: 12px;
-        position: relative;
-    }
-
-    #downloadButton {
-        bottom: 18px;
-        right: -20px;
-        height: 24px;
-    }
-
-    .splide__slide {
-        margin-right: 105px !important;
-    }
-    .primaryNumbers {
-        font-size: 11em;
-    }
-    .skillName {
-        font-size: 1.5em;
-        padding-left: 20px;
-        max-width: 291px;
-    }
-
-    .skillPosition {
-        font-size: 13px;
-        padding-left: 20px;
-        padding-top: 10px;
-    }
-    .skillContent {
-        font-size: 14px;
-        color: #707070;
-        padding: 10px 30px 0px 30px;
-        max-width: 291px;
-    }
-
-  }
-
-
-  @media only screen and (max-width: 375px){
-     
-    
-    .upperContiner div h2 {
-        font-size: 9px;
-     
-    }
-
-    .upperContiner div p {
-        margin-top: 3px;
-        font-size: 8px;
-    }
-
-    .primaryNumbers {
-        font-size: 8em;
+    @media only screen and (max-width: 1900px) {
+        #studentName {
+            font-size: 5.5em;
         }
-
-  }
-
-  @media only screen and (max-width: 320px){
-     
+    }
     
-    .upperContiner div h2 {
-        font-size: 8px;
-     
-    }
-
-    .upperContiner div p {
-        margin-top: 3px;
-        font-size: 7px;
-    }
-
-    .primaryNumbers {
-        font-size: 8em;
+    @media only screen and (max-width: 1600px) {
+        #studentName {
+            font-size: 5.5em;
         }
-
-  }
-
-  
-
+        .primaryNumbers {
+            font-size: 12em;
+        }
+        .upperContiner {
+            padding: 30px 20px 20px 20px;
+        }
+        .downloadContainer div p {
+            font-size: .95em;
+        }
+        .upperContiner div h2 {
+            padding-top: 7px;
+        }
+        .participation svg {
+            height: 32px;
+            padding: 5px;
+        }
+        .skillName {
+            font-size: 2em;
+            padding-left: 35px;
+            max-width: 900px;
+        }
+        .skillPosition {
+            padding-left: 40px;
+        }
+        .skillContent {
+            font-size: 15px;
+            padding: 10px 45px 0px 45px;
+            max-width: 1000px;
+            height: 250px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+    
+    @media only screen and (max-height: 900px) {
+        .upperContiner div p {
+            font-size: 10px;
+        }
+        .participation svg {
+            height: 25px;
+        }
+        .downloadContainer h1 {
+            font-size: 10px;
+        }
+        .downloadContainer h2 {
+            font-size: 10px;
+        }
+        .downloadContainer p {
+            font-size: 10px;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        .upperContiner div h2 {
+            color: #000000;
+            font-size: 13px;
+        }
+        .upperContiner div p {
+            margin-top: 5px;
+            color: #707070;
+            font-size: 12px;
+        }
+        .downloadContainer div h1 {
+            font-size: 13px;
+        }
+        .downloadFile {
+            bottom: 8px;
+        }
+        .downloadContainer div p {
+            font-size: 12px;
+        }
+        #downloadButton {
+            bottom: 23px;
+            right: -17px;
+            height: 30px;
+        }
+        .skillName {
+            font-size: 2.5em;
+            padding-left: 35px;
+            max-width: 661px;
+        }
+        .skillPosition {
+            font-size: 14px;
+            padding-left: 35px;
+            padding-top: 20px;
+        }
+        .skillContent {
+            font-size: 15px;
+            padding: 10px 45px 0px 45px;
+            max-width: 660px;
+        }
+    }
+    
+    @media only screen and (max-width: 416px) {
+        header {
+            height: 11vh;
+        }
+        #studentName {
+            font-size: 2.5em;
+        }
+        .studentOverview {
+            height: 90vh;
+        }
+        .upperContiner {
+            padding: 10px;
+        }
+        .upperContiner div h2 {
+            font-size: 10px;
+        }
+        .upperContiner div p {
+            margin-top: 3px;
+            font-size: 9px;
+        }
+        .upperContiner {
+            height: 83%;
+        }
+        .downloadContainer {
+            height: 20%;
+        }
+        .downloadContainer>div:first-child {
+            display: none;
+        }
+        .downloadContainer div h2 {
+            padding-left: 3px;
+            font-size: 11px;
+        }
+        .downloadFile {
+            bottom: 17px;
+        }
+        .downloadContainer div p {
+            display: none;
+        }
+        .downloadFile {
+            top: 12px;
+            position: relative;
+        }
+        #downloadButton {
+            bottom: 18px;
+            right: -20px;
+            height: 24px;
+        }
+        .splide__slide {
+            margin-right: 105px !important;
+        }
+        .primaryNumbers {
+            font-size: 11em;
+        }
+        .skillName {
+            font-size: 1.5em;
+            padding-left: 20px;
+            max-width: 291px;
+        }
+        .skillPosition {
+            font-size: 13px;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .skillContent {
+            font-size: 14px;
+            color: #707070;
+            padding: 10px 30px 0px 30px;
+            max-width: 291px;
+        }
+    }
+    
+    @media only screen and (max-width: 375px) {
+        .upperContiner div h2 {
+            font-size: 9px;
+        }
+        .upperContiner div p {
+            margin-top: 3px;
+            font-size: 8px;
+        }
+        .primaryNumbers {
+            font-size: 8em;
+        }
+    }
+    
+    @media only screen and (max-width: 320px) {
+        .upperContiner div h2 {
+            font-size: 8px;
+        }
+        .upperContiner div p {
+            margin-top: 3px;
+            font-size: 7px;
+        }
+        .primaryNumbers {
+            font-size: 8em;
+        }
+    }
