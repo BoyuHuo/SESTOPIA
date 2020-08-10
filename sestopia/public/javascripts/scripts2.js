@@ -44,6 +44,11 @@ function updateData(data) {
     $('#studentName').append(data.student_name);
     $('#knowledgeArea').append(data.knowledge_area);
     $('#theSkill').append(data.name);
+    if (data.download) {
+        $(".downloadIcon h2").html("<a href='" + data.download + "' download > Download Now </a>");
+    } else {
+        $(".downloadIcon h2").html("No Documents");
+    }
     testArray = [0, 1, 1, 0];
     for (var i = 0; i < testArray.length; i++) {
         if (testArray[i] == 0) {
