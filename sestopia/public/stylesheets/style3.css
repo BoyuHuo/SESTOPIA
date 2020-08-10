@@ -1,65 +1,111 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.about{
-    /* top: -50px; */
-    text-align: center;
-    padding-left: 0px;
-    z-index: 10;
-    width: 100%;
-    margin-bottom:100px;
-    /* height: calc(20vh + 50px); */
-    /* height: 369px; */
-    /* line-height: 1vh; */
-    font-size: 150px;
-    text-transform: uppercase;
-    font: Medium 319px/382px Futura Md BT;
-    letter-spacing: 0px;
-    color: #363636;        
+.grid-container{
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+      "header header header"
+      "nav nav responsibility" 
+      "footer footer footer";
+  grid-template-rows: 200px 1fr 60px;
 }
 
-.container-fluid{
-    
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5)); 
-    background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
-    background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
-
+.grid-item-1{
+  grid-area: header;
+  justify-self: center;   
+  align-self: center; 
 }
 
-.name{
-    font-size: 12px;
+.grid-item-2{
+  grid-area: nav;
+}
+
+.grid-item-3{
+  grid-area: responsibility;
+}
+
+.grid-item-4{
+  grid-area: footer;
 }
 
 ul.no-bullets {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-  }
-.spacer {
-    padding-top: 80px;
-    padding-bottom: 40px
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
-.container {
-    @media (max-width: @screen-xs-min) {
-      font-size: 10px;
-    }
+.name{
+  font-size: 12px;
+}
+
+.spacer {
+  padding-top: 200px;
+  padding-bottom: 40px;
+  padding-right: 10px;
+}
+
+.spacer1{
+  padding-top: 100px;
+}
+
+.about{
+  /* top: -50px; */
+  text-align: center;
+  padding-left: 0px;
+  z-index: 10;
+  width: 100%;
+  margin-bottom:100px;
+  /* height: calc(20vh + 50px); */
+  /* height: 369px; */
+  /* line-height: 1vh; */
+  font-size: 150px;
+  text-transform: uppercase;
+  font: Medium 319px/382px Futura Md BT;
+  letter-spacing: 0px;
+  color: #363636;        
+}
+
+.grid-container{
   
-    @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
-      font-size: 30px;
-    }
-  
-    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-      font-size: 50px;
-    }
-  
-    @media (min-width: @screen-md-min) {
-      font-size: 100px;
-    }
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FBF2E5)); 
+  background: -o-linear-gradient(top, transparent 0%, #FBF2E5 100%);
+  background: linear-gradient(to bottom, transparent 0%, #FBF2E5 100%);
+
+}
+
+#inline{
+  width: 100;
+  height:auto;
+  display: flex;
+}
+
+#left{
+  width: 50%;
+  height: 100%;
+  margin: 10px;
+}
+
+#right{
+  width: 50%;
+  height: 100%;
+  margin: 10px;;
+}
+
+@media screen and (max-width: 600px){
+  .grid-item-1{
+      grid-column: span 6;
   }
 
+  .grid-item-2{
+      grid-row: 3;
+      grid-column: span 6;
+  }
 
-
+  .grid-item-3{
+      grid-column: span 12;
+  }
+}
