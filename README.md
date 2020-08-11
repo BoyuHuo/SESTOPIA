@@ -52,3 +52,9 @@ Rerequisite: node
 #test
 
 `npm test`
+
+#Lint
+`npm run lint`
+
+#Lint fix
+`npm run fix`
