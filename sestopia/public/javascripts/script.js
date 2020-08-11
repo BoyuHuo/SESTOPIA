@@ -24,7 +24,7 @@ function getAllMembers() {
         console.log(res);
         updateData(res);
     }, err => {
-        alert(err.MSG);
+        alert(err);
     });
 }
 
@@ -33,7 +33,7 @@ function getSkills(keyworkds) {
     request('/api/skills/search?name=' + keyworkds, 'GET', null).then(res => {
         updateData(res);
     }, err => {
-        alert(res.MSG);
+        alert(err);
     });
 }
 
@@ -48,8 +48,6 @@ function searchSkills() {
         return false;
     }
     getSkills($('#skill-search').val());
-
-
 }
 
 //Update list data, remount the component
