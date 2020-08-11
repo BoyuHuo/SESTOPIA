@@ -1,431 +1,506 @@
+
     /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
+  
+
+
+:root {
+    --main-bg-color: #FBF2E5;
+    --main-txt-color: #363636;
+    --content-txt:#707070;
+    --overView-bg:#FFFEFC;
+    --content-overview:#3D3D3D;
+
     
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .primaryNumbers {
-        font-size: 17em;
-        -webkit-text-stroke: black;
-        color: white;
-        -webkit-text-stroke-width: 2px;
-    }
-    /* .slidersC {
-        margin-top: 20vh;
-    } */
-    
-    .primaryNumbers.is-active {
-        color: #363636;
-        -webkit-text-stroke-width: 0px;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-    
-    header {
-        height: 20vh;
-        background-color: #FBF2E5;
-    }
-    
-    #studentName {
-        /* position: fixed; */
-        /* top: -50px; */
-        /* padding-left: 100px; */
-        /* z-index: 10; */
-        /* width: 100%; */
-        /* height: calc(20vh + 50px); */
-        /* height: 369px; */
-        /* line-height: 1vh; */
-        /* background-color: #FBF2E5; */
-        position: absolute;
-        top: -.34em;
-        left: .5em;
-        font-size: 8em;
-        text-transform: uppercase;
-        font: Medium 319px/382px Futura Md BT;
-        letter-spacing: 0px;
-        color: #363636;
-    }
-    /* #primary-slider {
-        margin-bottom: 80px;
-    } */
-    
-    .skillContent {
-        font: Regular 14px/22px Roboto;
-        letter-spacing: 0px;
-        font-size: 14px;
-        color: #707070;
-        padding-left: 60px;
-        max-width: 1300px;
-        height: 400px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        transition: all 0.5s;
-    }
+  }
+
+/* ////////////////Universal Styles//////////////// */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ////////////////header section//////////////// */
+
+header {
+    height: 20vh;
+    background-color: var(--main-bg-color) ;
+
+}
+
+#studentName {
+    position: absolute;
+    top: -.34em;
+    left: .5em;
+    font-size: 8em;
+    text-transform: uppercase;
+    font: Medium 319px/382px Futura Md BT;
+    letter-spacing: 0px;
+    color: var(--main-txt-color);
+}
+
+
+/* //////////////// primary slider section//////////////// */
+.primaryNumbers {
+    font-size: 17em;
+    -webkit-text-stroke: black;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+}
+
+.primaryNumbers.is-active {
+    color: var(--main-txt-color);
+    -webkit-text-stroke-width: 0px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+/* ////////////////skill slider section//////////////// */
+
+.skillContent {
+    font: Regular 14px/22px Roboto;
+    letter-spacing: 0px;
+    font-size: 14px;
+    color: var(--content-txt);
+}
+
+.skillName {
+    font-size: 3em;
+    padding-left: 60px;
+}
+
+.skillPosition {
+    font-size: 14px;
+    padding-left: 70px;
+}
+
+/* ////////////////overview section//////////////// */
+.studentOverview {
+    height: 80vh;
+    width: 25vw;
+    position: fixed;
+    right: 0;
+    z-index: 11;
+    border-left: black solid 2px;
+}
+
+.upperContiner {
+    background-color: var(--overView-bg);
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 20px 20px;
+}
+
+.upperContiner div h2 {
+    color: black;
+    font-size: 14px;
+}
+
+.upperContiner div p {
+    margin-top: 10px;
+    color: var(--content-txt);
+    font-size: 14px
+}
+
+.downloadContainer {
+    background-color: var(--main-bg-color);
+    height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+
+.downloadContainer div h1 {
+    color: black;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.downloadFile {
+    position: absolute;
+    bottom: 14px;
+}
+
+.downloadContainer div h2 {
+    color: black;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.downloadContainer div p {
+    color: var(--content-overview);
+    padding-top: 5px;
+    padding-left: 20px;
+    opacity: .5;
+}
+
+#downloadButton {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    height: 40px;
+-webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+
+#documentIcon {
+    padding-left: 20px;
+}
+
+.downloadIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.participation{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    padding-top: 10px;
+
+}
+
+.participation svg{
+    height: 39px;
+    padding: 5px;
     
 
-    .skillContent:hover {
-        overflow-y: auto;
-        transition: all 0.5s;
-    }
-    .skillName {
-        font-size: 3em;
-        padding-left: 60px;
-        /* padding-top: 30px; */
-    }
     
-    .skillPosition {
-        font-size: 14px;
-        padding-left: 70px;
-    }
+}
+
+
+
+
+
+
+
+/* ////////////////arrows section//////////////// */
+.splide__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.testme {
+    position: fixed !important;
+    right: 35% !important;
+    left: unset !important;
+    z-index: 300 !important;
+}
+
+.custom-prev {
+    top: 95vh !important;
+    display: none !important;
+}
+
+.custom-next {
+    top: 95vh !important;
+    right: 32% !important;
+    display: none !important;
+}
+
+
+
+
+
+
+
+/* queries */
+
+
+
+/* 1900 pixels width */
+@media only screen and (max-width: 1900px) {
+
+#studentName {
+    font-size: 5.5em;
+}
+
+}
+
+
+
+
+/* 1440 pixels width */
+@media only screen and (max-width: 1440px) {
+
+#studentName {
+    font-size: 5.5em;
+}
+
+.primaryNumbers{
+    font-size: 12em;
+}
+
+.upperContiner{
+    padding: 30px 20px 20px 20px;
+}
+.downloadContainer div p{
+    font-size: .95em;
+
+}
+.upperContiner div h2{
+    padding-top:7px ;
+}
+
+.participation svg{
+    height: 32px;
+    padding: 5px;
+}
+
+}
+
+
+
+
+
+
+
+/* 700 pixels height */
+@media only screen and (max-height: 700px) {
+
+.upperContiner div p {
+    font-size: 10px;
     
-    .studentOverview {
-        height: 80vh;
-        width: 25vw;
-        /* background: red; */
-        position: fixed;
-        /* top: 20vh; */
-        right: 0;
-        /* top: 16vh; */
-        z-index: 11;
-        border-left: black solid 2px;
-    }
+}
+.participation svg{
+
+    height: 25px;
+}
+
+.downloadContainer h1{
+    font-size: 10px;
+
+}
+
+.downloadContainer h2{
+    font-size: 10px;
+
+}
+
+.downloadContainer p{
+    font-size: 10px;
+
+}
+}
+
+
+
+
+/* 1024 pixels width */
+@media only screen and (max-width: 1024px) {
+.upperContiner div h2 {
+color: black;
+font-size: 13px;
+}
+.upperContiner div p {
+    margin-top: 5px;
+    color: var(--content-txt);
+    font-size: 12px;
+}
+
+.downloadContainer div h1 {
     
-    .upperContiner {
-        background-color: #FFFEFC;
-        height: 70%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        padding: 20px 20px;
+    font-size: 13px;
+}
+
+.downloadFile {
+    bottom: 8px;
+
+}
+.downloadContainer div p {
+    font-size: 12px;
+}
+
+
+#downloadButton {
+    bottom: 23px;
+    right: -17px;
+    height: 30px;
+}
+
+.skillName {
+    font-size: 2.5em;
+    padding-left: 35px;
+    max-width: 661px;
+}
+
+.skillPosition {
+    font-size: 14px;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+.skillContent {
+    font-size: 15px;
+    padding: 10px 45px 0px 45px;
+    max-width: 660px;
+}
+}
+
+
+
+/* 416 pixels width */
+
+@media only screen and (max-width: 416px){
+header {
+    height: 11vh;
+}
+#studentName {
+    font-size: 2.5em;
+}
+
+.studentOverview {
+    height: 90vh;
+}
+.upperContiner {
+    padding: 10px;
+}
+
+
+
+.upperContiner div h2 {
+    font-size: 10px;
+ 
+}
+
+.upperContiner div p {
+    margin-top: 3px;
+    font-size: 9px;
+}
+.upperContiner {
+    height: 83%;
+}
+
+.downloadContainer {
+    height: 20%;
+}
+.downloadContainer > div:first-child{
+
+    display: none;
+}
+
+.downloadContainer div h2 {
+    padding-left: 3px;
+    font-size: 11px;
+}
+
+.downloadFile {
+    bottom: 17px;
+}
+.downloadContainer div p {
+    display: none;
+}
+.downloadFile {
+    top: 12px;
+    position: relative;
+}
+
+#downloadButton {
+    bottom: 18px;
+    right: -20px;
+    height: 24px;
+}
+
+.splide__slide {
+    margin-right: 105px !important;
+}
+.primaryNumbers {
+    font-size: 11em;
+}
+.skillName {
+    font-size: 1.5em;
+    padding-left: 20px;
+    max-width: 291px;
+}
+
+.skillPosition {
+    font-size: 13px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.skillContent {
+    font-size: 14px;
+    color: var(--content-txt);
+    padding: 10px 30px 0px 30px;
+    max-width: 291px;
+}
+
+}
+
+
+
+/* 375 pixels width */
+@media only screen and (max-width: 375px){
+ 
+
+.upperContiner div h2 {
+    font-size: 9px;
+ 
+}
+
+.upperContiner div p {
+    margin-top: 3px;
+    font-size: 8px;
+}
+
+.primaryNumbers {
+    font-size: 8em;
     }
-    
-    .upperContiner div h2 {
-        color: #000000;
-        font-size: 14px;
+
+}
+
+
+
+/* 320 pixels width */
+@media only screen and (max-width: 320px){
+ 
+
+.upperContiner div h2 {
+    font-size: 8px;
+ 
+}
+
+.upperContiner div p {
+    margin-top: 3px;
+    font-size: 7px;
+}
+
+.primaryNumbers {
+    font-size: 8em;
     }
-    
-    .upperContiner div p {
-        margin-top: 10px;
-        color: #707070;
-        font-size: 14px
-    }
-    
-    .downloadContainer {
-        background-color: #FBF2E5;
-        height: 30%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-pack: distribute;
-        justify-content: space-between;
-    }
-    
-    .downloadContainer div h1 {
-        color: #000000;
-        padding-left: 20px;
-        padding-top: 20px;
-        font-size: 14px;
-    }
-    
-    .downloadFile {
-        position: absolute;
-        bottom: 14px;
-    }
-    
-    .downloadContainer div h2 {
-        color: #000000;
-        padding-left: 5px;
-        font-size: 14px;
-    }
-    
-    .downloadContainer div p {
-        color: #3D3D3D;
-        padding-top: 5px;
-        padding-left: 20px;
-        opacity: .5;
-    }
-    
-    #downloadButton {
-        position: absolute;
-        bottom: 12px;
-        right: 0;
-        height: 40px;
-        transform: rotate(45deg);
-    }
-    
-    #documentIcon {
-        padding-left: 20px;
-    }
-    
-    .downloadIcon {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    .downloadIcon a {
-        text-decoration: none;
-        color: #000000;
-    }
-    
-    .downloadIcon a {
-        text-decoration: none;
-        color: #000000;
-    }
-    
-    .downloadIcon a:hover {
-        text-decoration: none;
-        color: #707070;
-    }
-    
-    .splide__arrows {
-        display: flex;
-    }
-    
-    .testme {
-        position: fixed !important;
-        right: 35% !important;
-        left: unset !important;
-        z-index: 300 !important;
-    }
-    
-    .custom-prev {
-        top: 95vh !important;
-        display: none !important;
-    }
-    
-    .custom-next {
-        top: 95vh !important;
-        right: 32% !important;
-        display: none !important;
-    }
-    
-    .participation {
-        display: flex;
-        padding-top: 10px;
-    }
-    
-    .participation svg {
-        height: 39px;
-        padding: 5px;
-    }
-    /* queries */
-    
-    @media only screen and (max-width: 1900px) {
-        #studentName {
-            font-size: 5.5em;
-        }
-    }
-    
-    @media only screen and (max-width: 1600px) {
-        #studentName {
-            font-size: 5.5em;
-        }
-        .primaryNumbers {
-            font-size: 12em;
-        }
-        .upperContiner {
-            padding: 30px 20px 20px 20px;
-        }
-        .downloadContainer div p {
-            font-size: .95em;
-        }
-        .upperContiner div h2 {
-            padding-top: 7px;
-        }
-        .participation svg {
-            height: 32px;
-            padding: 5px;
-        }
-        .skillName {
-            font-size: 2em;
-            padding-left: 35px;
-            max-width: 900px;
-        }
-        .skillPosition {
-            padding-left: 40px;
-        }
-        .skillContent {
-            font-size: 15px;
-            padding: 10px 45px 0px 45px;
-            max-width: 1000px;
-            height: 250px;
-            overflow-y: hidden;
-            overflow-x: hidden;
-            transition: all 0.5s;
-        }
-    }
-    
-    @media only screen and (max-height: 900px) {
-        .upperContiner div p {
-            font-size: 10px;
-        }
-        .participation svg {
-            height: 25px;
-        }
-        .downloadContainer h1 {
-            font-size: 10px;
-        }
-        .downloadContainer h2 {
-            font-size: 10px;
-        }
-        .downloadContainer p {
-            font-size: 10px;
-        }
-    }
-    
-    @media only screen and (max-width: 1024px) {
-        .upperContiner div h2 {
-            color: #000000;
-            font-size: 13px;
-        }
-        .upperContiner div p {
-            margin-top: 5px;
-            color: #707070;
-            font-size: 12px;
-        }
-        .downloadContainer div h1 {
-            font-size: 13px;
-        }
-        .downloadFile {
-            bottom: 8px;
-        }
-        .downloadContainer div p {
-            font-size: 12px;
-        }
-        #downloadButton {
-            bottom: 23px;
-            right: -17px;
-            height: 30px;
-        }
-        .skillName {
-            font-size: 2.5em;
-            padding-left: 35px;
-            max-width: 661px;
-        }
-        .skillPosition {
-            font-size: 14px;
-            padding-left: 35px;
-            padding-top: 20px;
-        }
-        .skillContent {
-            font-size: 15px;
-            padding: 10px 45px 0px 45px;
-            max-width: 660px;
-        }
-    }
-    
-    @media only screen and (max-width: 416px) {
-        header {
-            height: 11vh;
-        }
-        #studentName {
-            font-size: 2.5em;
-        }
-        .studentOverview {
-            height: 90vh;
-        }
-        .upperContiner {
-            padding: 10px;
-        }
-        .upperContiner div h2 {
-            font-size: 10px;
-        }
-        .upperContiner div p {
-            margin-top: 3px;
-            font-size: 9px;
-        }
-        .upperContiner {
-            height: 83%;
-        }
-        .downloadContainer {
-            height: 20%;
-        }
-        .downloadContainer>div:first-child {
-            display: none;
-        }
-        .downloadContainer div h2 {
-            padding-left: 3px;
-            font-size: 11px;
-        }
-        .downloadFile {
-            bottom: 17px;
-        }
-        .downloadContainer div p {
-            display: none;
-        }
-        .downloadFile {
-            top: 12px;
-            position: relative;
-        }
-        #downloadButton {
-            bottom: 18px;
-            right: -20px;
-            height: 24px;
-        }
-        .splide__slide {
-            margin-right: 105px !important;
-        }
-        .primaryNumbers {
-            font-size: 11em;
-        }
-        .skillName {
-            font-size: 1.5em;
-            padding-left: 20px;
-            max-width: 291px;
-        }
-        .skillPosition {
-            font-size: 13px;
-            padding-left: 20px;
-            padding-top: 10px;
-        }
-        .skillContent {
-            font-size: 14px;
-            color: #707070;
-            padding: 10px 30px 0px 30px;
-            max-width: 291px;
-        }
-    }
-    
-    @media only screen and (max-width: 375px) {
-        .upperContiner div h2 {
-            font-size: 9px;
-        }
-        .upperContiner div p {
-            margin-top: 3px;
-            font-size: 8px;
-        }
-        .primaryNumbers {
-            font-size: 8em;
-        }
-    }
-    
-    @media only screen and (max-width: 320px) {
-        .upperContiner div h2 {
-            font-size: 8px;
-        }
-        .upperContiner div p {
-            margin-top: 3px;
-            font-size: 7px;
-        }
-        .primaryNumbers {
-            font-size: 8em;
-        }
-    }
+
+}
+
+
