@@ -24,7 +24,7 @@ Uchechukwu Iroegbu *...*
 
 ---
 
-File Structure  
+### File Structure  
 + Documents	`//include all the documents e.g api instruction, report, presentation slides ..
 + sestopia `//project`
   + bin   
@@ -37,7 +37,7 @@ File Structure
 
 ---
 
-How to start
+### How to start
 
 Rerequisite: node
 
@@ -54,7 +54,9 @@ Rerequisite: node
 `npm test`
 
 #Lint
+
 `npm run lint`
 
 #Lint fix
+
 `npm run fix`
