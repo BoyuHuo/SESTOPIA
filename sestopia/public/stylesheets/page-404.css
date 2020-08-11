@@ -1,0 +1,7 @@
+.title{
+        position: fixed;
+        top:45%;
+        left:30%;
+        color:black;
+        z-index:31;
+}

@@ -52,6 +52,14 @@
         letter-spacing: 0px;
         color: #363636;
     }
+    
+    .back-btn {
+        margin-left: 30px;
+    }
+    
+    .back-btn:hover {
+        opacity: 0.6;
+    }
     /* #primary-slider {
         margin-bottom: 80px;
     } */
@@ -62,6 +70,7 @@
         font-size: 14px;
         color: #707070;
         padding-left: 60px;
+        padding-top: 10px;
         max-width: 1300px;
         height: 400px;
         overflow-y: hidden;
@@ -69,11 +78,11 @@
         transition: all 0.5s;
     }
     
-
     .skillContent:hover {
         overflow-y: auto;
         transition: all 0.5s;
     }
+    
     .skillName {
         font-size: 3em;
         padding-left: 60px;
@@ -82,7 +91,7 @@
     
     .skillPosition {
         font-size: 14px;
-        padding-left: 70px;
+        padding-left: 60px;
     }
     
     .studentOverview {
@@ -239,7 +248,7 @@
             font-size: 5.5em;
         }
         .primaryNumbers {
-            font-size: 12em;
+            font-size: 10em;
         }
         .upperContiner {
             padding: 30px 20px 20px 20px;
@@ -291,6 +300,12 @@
         }
     }
     
+    @media only screen and (max-height: 500px) {
+        .primaryNumbers {
+            font-size: 6em;
+        }
+    }
+    
     @media only screen and (max-width: 1024px) {
         .upperContiner div h2 {
             color: #000000;
@@ -332,7 +347,7 @@
         }
     }
     
-    @media only screen and (max-width: 416px) {
+    @media only screen and (max-width: 600px) {
         header {
             height: 11vh;
         }
@@ -384,7 +399,7 @@
             margin-right: 105px !important;
         }
         .primaryNumbers {
-            font-size: 11em;
+            font-size: 6em;
         }
         .skillName {
             font-size: 1.5em;
