@@ -191,14 +191,14 @@ header {
 }
 
 .memberInfo h1 {
-    font-size: 6.5em;
+    font-size: 4em;
     -webkit-text-stroke: black;
     color: white;
     -webkit-text-stroke-width: 2px;
 }
 
 .memberInfo.is-active h1 {
-    font-size: 7.5em;
+    font-size: 5em;
     color: #363636;
     -webkit-text-stroke-width: 0px;
     -webkit-transition: all 0.3s;
@@ -331,10 +331,10 @@ div.search-group::after {
         z-index: 101;
     }
     .memberInfo h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
     .memberInfo.is-active h1 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }
 
@@ -351,6 +351,6 @@ div.search-group::after {
         font-size: 0.5em;
     }
     .memberInfo.is-active h1 {
-        font-size: 1.5em;
+        font-size: 1.0em;
     }
 }
