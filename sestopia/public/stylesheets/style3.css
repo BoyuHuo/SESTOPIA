@@ -75,19 +75,19 @@ ul.no-bullets {
     padding: 4em;
 }
 
-#inline {
+.inline {
     width: 100;
     height: auto;
     display: flex;
 }
 
-#left {
+.left {
     width: 50%;
     height: 100%;
     margin: 10px;
 }
 
-#right {
+.right {
     width: 50%;
     height: 100%;
     margin: 10px;
