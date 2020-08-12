@@ -54,7 +54,7 @@ function searchSkills() {
 function updateData(data) {
     $('#membersList').empty();
     data.forEach(item =>
-        $('#membersList').append('<li class="splide__slide memberInfo" >' + '<div><h1 class="a" >' + item.knowledge_area + '</h1>' + '<h2 class="b" >' + item.student_name + '</h2>' + '<h3 class="c" >' + item.name + '</h3></div>' + "<h3 style='width:100%; text-align:center; padding-top:5px;'><img style='width:60%' src='./images/forward_mark.svg'></h3>" + '</li>')
+        $('#membersList').append('<li class="splide__slide memberInfo" >' + '<div><h1 class="a" >' + item.knowledge_area + '</h1>' + '<h2 class="b" >' + item.student_name + '</h2>' + '<h3 class="c" >' + item.name + '</h3></div>' + '<h3 style=\'width:100%; text-align:center; padding-top:5px;\'><img style=\'width:60%\' src=\'./images/forward_mark.svg\'></h3>' + '</li>')
         // item.knowledge_area
     );
 

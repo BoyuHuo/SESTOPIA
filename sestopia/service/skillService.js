@@ -26,9 +26,9 @@ let getSkillsByName = function(name) {
     });
 };
 
-let addSkill = function(name, classification, prerequisites, knowledgeArea, rationale, rolesForSkill, relatedActivities, realWorldScenario, roleOfAcademia, tools, selfAssessment, reference) {
+let addSkill = function(skilldoc) {
     return new Promise(function(resolve, reject) {
-        mysql.query('INSERT INTO skills (name,classification,prerequisites,knowledge_area,rationale,roles_for_skill,related_activities,real_world_scenario,role_of_academia,tools,self_assessment,reference) VALUES (' + mysql.pool.escape(name) + ',' + mysql.pool.escape(classification) + ',' + mysql.pool.escape(prerequisites) + ',' + mysql.pool.escape(knowledgeArea) + ',' + mysql.pool.escape(rationale) + ',' + mysql.pool.escape(rolesForSkill) + ',' + mysql.pool.escape(relatedActivities) + ',' + mysql.pool.escape(realWorldScenario) + ',' + mysql.pool.escape(roleOfAcademia) + ',' + mysql.pool.escape(tools) + ',' + mysql.pool.escape(selfAssessment) + ',' + mysql.pool.escape(reference) + ')', function(err, data, field) {
+        mysql.query('INSERT INTO skills (name,classification,prerequisites,knowledge_area,rationale,roles_for_skill,related_activities,real_world_scenario,role_of_academia,tools,self_assessment,reference) VALUES (' + mysql.pool.escape(skilldoc.name) + ',' + mysql.pool.escape(skilldoc.classification) + ',' + mysql.pool.escape(skilldoc.prerequisites) + ',' + mysql.pool.escape(skilldoc.knowledgeArea) + ',' + mysql.pool.escape(skilldoc.rationale) + ',' + mysql.pool.escape(skilldoc.rolesForSkill) + ',' + mysql.pool.escape(skilldoc.relatedActivities) + ',' + mysql.pool.escape(skilldoc.realWorldScenario) + ',' + mysql.pool.escape(skilldoc.roleOfAcademia) + ',' + mysql.pool.escape(skilldoc.tools) + ',' + mysql.pool.escape(skilldoc.selfAssessment) + ',' + mysql.pool.escape(skilldoc.reference) + ')', function(err, data, field) {
             if (err) {
                 reject(err);
             } else {

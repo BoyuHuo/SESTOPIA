@@ -90,7 +90,8 @@
                 document.addEventListener('DOMMouseScroll', scrollFunc, false);
             }
             //trigger scroll event
-            window.onmousewheel = document.onmousewheel = scrollFunc;
+            document.onmousewheel = scrollFunc;
+            window.onmousewheel = document.onmousewheel;
         }
     </script>
 

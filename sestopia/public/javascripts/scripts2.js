@@ -46,13 +46,14 @@ function updateData(data) {
     $('#theSkill').append(data.name);
     $('#student-overview').append(data.student_overview);
     if (data.download) {
-        $(".downloadIcon h2").html("<a href='" + data.download + "' download > Download Now </a>");
+        $('.downloadIcon h2').html('<a href=\'' + data.download + '\' download > Download Now </a>');
     } else {
-        $(".downloadIcon h2").html("No Documents");
+        $('.downloadIcon h2').html('No Documents');
     }
-    let skillArray = data.responsibility.split("");
+    let skillArray = data.responsibility.split('');
+
     for (var i = 0; i < skillArray.length; i++) {
-        if (skillArray[i] == "0") {
+        if (skillArray[i] == '0') {
             $('#responsibility' + i).css('opacity', '0.33');
 
         }
@@ -103,26 +104,28 @@ function windowAddMouseWheel() {
         e = e || window.event;
         if (e.wheelDelta) { //IE
             if (e.wheelDelta > 0) { //scroll up
-                $(".splide__arrow--prev").click();
+                $('.splide__arrow--prev').click();
             }
             if (e.wheelDelta < 0) { //scroll down
-                $(".splide__arrow--next").click();
+                $('.splide__arrow--next').click();
             }
         } else if (e.detail) { //Firefox or other webkit engine browser
             if (e.detail > 0) { //scroll up
-                $(".splide__arrow--prev").click();
+                $('.splide__arrow--prev').click();
             }
             if (e.detail < 0) { //scroll down
-                $(".splide__arrow--next").click();
+                $('.splide__arrow--next').click();
             }
         }
     };
     //bind scroll event
+
     if (document.addEventListener) {
-        document.getElementById("primary-slider-track").addEventListener('DOMMouseScroll', scrollFunc, false);
+        document.getElementById('primary-slider-track').addEventListener('DOMMouseScroll', scrollFunc, false);
     }
     //trigger scroll event
-    window.onmousewheel = document.onmousewheel = scrollFunc;
+     document.onmousewheel = scrollFunc;
+    window.onmousewheel = document.onmousewheel;
 }
 
 function getQueryVariable(variable) {
