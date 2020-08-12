@@ -1,18 +1,1 @@
-var request = function(url, type, data) {
-    return new Promise(function(resolve, reject) {
-        $.ajax({
-            url: url,
-            dataType: 'json',
-            async: true,
-            data: data,
-            type: type,
-            success: function(req) {
-                resolve(req);
-            },
-            error: function(req) {
-                reject(req);
-            },
-        });
-
-    });
-};
+var request=function(n,e,r){return new Promise(function(t,a){$.ajax({url:n,dataType:"json",async:!0,data:r,type:e,success:function(n){t(n)},error:function(n){a(n)}})})};
