@@ -24,9 +24,9 @@ let query = function(sql, values) {
                     } else {
                         resolve(rows);
                     }
-
                     connection.release();
                 });
+                connection.release();
             }
         });
     });
