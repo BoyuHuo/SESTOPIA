@@ -5,21 +5,21 @@ Demo page: http://sestopia.baiyuhuo.com
 
 ### Team Members (Alphabetical)
 
-Ali Zafar Iqbal *40076898*  
+Ali Zafar Iqbal 
 
-Baiyu Huo *40076004*  
+Baiyu Huo  
 
-Chitra Gunasekaran *...*  
+Chitra Gunasekaran 
 
-Dhruv Goyani *...*  
+Dhruv Goyani 
 
-Mahsa Hemati *...*
+Mahsa Hemati 
 
-Michael Hanna *40075977*
+Michael Hanna 
 
-Shahryar Haghighifard *...*
+Shahryar Haghighifard 
 
-Uchechukwu Iroegbu *...*
+Uchechukwu Iroegbu 
 
 
 ---
